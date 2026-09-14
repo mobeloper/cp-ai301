@@ -1,8 +1,5 @@
 # ai301-coursework
 
-This is your one repository for the whole course. You create it in unit 1
-from the course template, and its link is the whole submission at every
-check-in; graders open the folder for that unit's work.
 
 ## What lives where
 
