@@ -1,0 +1,223 @@
+{
+  "rubric": "../issue-select/rubric.md",
+  "model": "sonnet",
+  "agreement": [
+    0,
+    6
+  ],
+  "results": [
+    {
+      "id": "issue-01",
+      "verdict": "reject",
+      "failed_checks": [
+        "responds-to-issues",
+        "good-to-start"
+      ],
+      "checks": [
+        {
+          "name": "maintainer-alive",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits all dated 2026-08-04, within 90 days of capture date 2026-08-05."
+        },
+        {
+          "name": "responds-to-issues",
+          "grade": "fail",
+          "evidence": "Sample shows fastest maintainer reply of 32.9 days (#16275); remaining 4 sampled issues have no maintainer comment."
+        },
+        {
+          "name": "shiped-recently",
+          "grade": "pass",
+          "evidence": "Latest release 26.7.0 dated 2026-07-31, within 90 days of capture date 2026-08-05."
+        },
+        {
+          "name": "unclaimed",
+          "grade": "pass",
+          "evidence": "Issue facts: 'assignees: none; linked PRs: none' and state is open."
+        },
+        {
+          "name": "good-to-start",
+          "grade": "fail",
+          "evidence": "Issue labels listed as 'type::documentation' \u2014 no 'good first issue' label."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-09",
+      "verdict": "reject",
+      "failed_checks": [
+        "unclaimed",
+        "responds-to-issues"
+      ],
+      "checks": [
+        {
+          "name": "maintainer-alive",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits all dated 2026-08-04, within 90 days of capture 2026-08-05"
+        },
+        {
+          "name": "unclaimed",
+          "grade": "fail",
+          "evidence": "linked PRs: conda/conda#11627 (closed) \u2014 list is not none/empty"
+        },
+        {
+          "name": "good-to-start",
+          "grade": "pass",
+          "evidence": "labels: ... good first issue ..."
+        },
+        {
+          "name": "responds-to-issues",
+          "grade": "fail",
+          "evidence": "maintainer first-response sample: only #16275 got a reply, at 32.9 days (>30); others show no maintainer comment"
+        },
+        {
+          "name": "shiped-recently",
+          "grade": "pass",
+          "evidence": "latest release: 26.7.0 (2026-07-31), 5 days before capture date 2026-08-05"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-11",
+      "verdict": "reject",
+      "failed_checks": [
+        "shiped-recently",
+        "good-to-start"
+      ],
+      "checks": [
+        {
+          "name": "maintainer-alive",
+          "grade": "pass",
+          "evidence": "last 5 default-branch commits all dated 2026-08-04"
+        },
+        {
+          "name": "responds-to-issues",
+          "grade": "pass",
+          "evidence": "#507 sample shows 0.4 days to first maintainer reply"
+        },
+        {
+          "name": "shiped-recently",
+          "grade": "fail",
+          "evidence": "latest release v1.0.0 on 2026-04-29, ~98 days before capture date 2026-08-05"
+        },
+        {
+          "name": "unclaimed",
+          "grade": "pass",
+          "evidence": "issue #519: assignees: none; linked PRs: none; state: open"
+        },
+        {
+          "name": "good-to-start",
+          "grade": "fail",
+          "evidence": "labels are 'Type: bug', 'Category: Proof mode', 'Priority: Medium' \u2014 no 'good first issue' label"
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-12",
+      "verdict": "accept",
+      "failed_checks": [],
+      "checks": [
+        {
+          "name": "maintainer-alive",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits: 2026-08-08 through 2026-08-12, all within 90 days of capture date 2026-08-12."
+        },
+        {
+          "name": "unclaimed",
+          "grade": "pass",
+          "evidence": "\"this issue: assignees: none; linked PRs: none\"; state: open."
+        },
+        {
+          "name": "good-to-start",
+          "grade": "pass",
+          "evidence": "labels: enhancement, good first issue, UI."
+        },
+        {
+          "name": "responds-to-issues",
+          "grade": "pass",
+          "evidence": "#4094 first maintainer reply in 0.3 days; #3638 in 0.5 days."
+        },
+        {
+          "name": "shiped-recently",
+          "grade": "pass",
+          "evidence": "latest release v0.9.1 on 2026-07-20, ~23 days before capture on 2026-08-12."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-16",
+      "verdict": "reject",
+      "failed_checks": [
+        "good-to-start",
+        "responds-to-issues"
+      ],
+      "checks": [
+        {
+          "name": "maintainer-alive",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits all dated 2026-08-04, within 90 days of 2026-08-05 capture."
+        },
+        {
+          "name": "unclaimed",
+          "grade": "pass",
+          "evidence": "assignees: none; linked PRs: none; state: open."
+        },
+        {
+          "name": "good-to-start",
+          "grade": "fail",
+          "evidence": "labels: type::bug \u2014 no 'good first issue' label."
+        },
+        {
+          "name": "responds-to-issues",
+          "grade": "fail",
+          "evidence": "Only 1/5 sampled issues got a maintainer reply, at 32.9 days (exceeds 30-day pass threshold)."
+        },
+        {
+          "name": "shiped-recently",
+          "grade": "pass",
+          "evidence": "Latest release 26.7.0 on 2026-07-31, within 90 days of capture."
+        }
+      ],
+      "error": null
+    },
+    {
+      "id": "issue-19",
+      "verdict": "reject",
+      "failed_checks": [
+        "shiped-recently",
+        "good-to-start"
+      ],
+      "checks": [
+        {
+          "name": "maintainer-alive",
+          "grade": "pass",
+          "evidence": "Last 5 default-branch commits all dated 2026-08-04, within 90 days of capture (2026-08-05)."
+        },
+        {
+          "name": "responds-to-issues",
+          "grade": "pass",
+          "evidence": "#507 shows 0.4 days to first maintainer reply."
+        },
+        {
+          "name": "shiped-recently",
+          "grade": "fail",
+          "evidence": "Latest release v1.0.0 dated 2026-04-29, ~98 days before capture, exceeding 90-day window."
+        },
+        {
+          "name": "unclaimed",
+          "grade": "pass",
+          "evidence": "Issue has assignees: none; linked PRs: none; state: open."
+        },
+        {
+          "name": "good-to-start",
+          "grade": "fail",
+          "evidence": "Labels are 'Type: bug, Category: Proof mode, Priority: High' \u2014 no 'good first issue' label."
+        }
+      ],
+      "error": null
+    }
+  ]
+}
