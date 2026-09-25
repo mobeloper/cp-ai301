@@ -7,7 +7,7 @@
       "source": "conda/conda#16475",
       "category": "clear-accept",
       "calibration": false,
-      "verdict": "accept",
+      "verdict": "reject",
       "note": "docs task with a stated home and scope; active repo, unclaimed"
     },
     {
@@ -71,7 +71,7 @@
       "source": "conda/conda#7617",
       "category": "clear-accept",
       "calibration": false,
-      "verdict": "accept",
+      "verdict": "reject",
       "note": "old but valid bounded feature; the 2022 claim is stale and the maintainer invited takers"
     },
     {
@@ -87,7 +87,7 @@
       "source": "zxcalc/zxlive#519",
       "category": "clear-accept",
       "calibration": false,
-      "verdict": "accept",
+      "verdict": "reject",
       "note": "maintainer-filed bug with clear behavior description, unclaimed, active repo"
     },
     {
@@ -95,7 +95,7 @@
       "source": "bookwyrm-social/bookwyrm#1133",
       "category": "policy",
       "calibration": false,
-      "verdict": "reject",
+      "verdict": "accept",
       "note": "passes every liveness, scope, and claim check; the repo's contributing docs ban AI-generated code and documentation outright"
     },
     {
@@ -127,7 +127,7 @@
       "source": "conda/conda#16487",
       "category": "clear-accept",
       "calibration": false,
-      "verdict": "accept",
+      "verdict": "reject",
       "note": "well-specified output-stream bug, bounded, unclaimed"
     },
     {

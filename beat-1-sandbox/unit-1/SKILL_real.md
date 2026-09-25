@@ -84,7 +84,9 @@ Emit a fenced JSON block, then nothing else after it:
 
 ```json
 {
-  "item": "<issue URL or bundle id>",
+  "issue-title": "<issue title>",
+  "issue-url": "<issue URL>",
+  "issue-number": "<issue number>",
   "checks": [
     {"name": "<check name>", "grade": "pass|fail|unclear",
      "evidence": "<one line: the fact or quote that decided it>"}
@@ -96,7 +98,7 @@ Emit a fenced JSON block, then nothing else after it:
 Before the JSON block you may show a short readable summary (a line per
 check). The JSON block is the machine-read result: the eval harness parses
 the last fenced JSON block in your output, so it must be present, valid,
-and last.
+and last. Save this JSON block as a results_live.json file in the local path.
 
 Live mode with several candidates: the summary becomes a ranked
 read-out (accepted candidates in fit order with a one-line fit reason

@@ -1,0 +1,62 @@
+All 71 open issues pass both required checks (repo has zero PRs anywhere, so nothing is claimed; the last 3 of 5 commits are within 90 days, so the maintainer is alive) — so every issue accepts. Preferred checks split them into two tiers:
+
+Repo-wide preferred checks (same for every issue):
+- responds-to-issues: fail — the last 5 issues (#69–#73) have 0 comments each
+- shiped-recently: fail — /releases/latest returns 404, no releases exist
+- fits-my-style: pass — docs/CONTRIBUTING.md exists
+
+Tier 1 — has good first issue label (21, all also tier-1), your best bets, roughly matching your Python/TS + frontend/backend interest:
+
+┌─────┬─────────────────────────────────────────────────────────┬────────────────────┐
+│  #  │                          Title                          │        Area        │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤
+│ 72  │ verify_password raises UnknownHashError                 │ api (Python)       │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤
+│ 62  │ Health check references nonexistent settings.redis_host │ api (Python)       │
+├─────┼────────────────────────────────────────────────────┤
+
+┌─────┬────────────────────────────────────────────────────┐
+│  #  │                          Title         Area        │
+├─────┼────────────────────────────────────────────────────┤
+│ 72  │ verify_password raises UnknownHashErrPython)       │
+├─────┼────────────────────────────────────────────────────┤
+│ 62  │ Health check references nonexistent settings.redis_host │ api (Python)       │
+├─────┼────────────────────────────────────────────────────┤
+│ 61  │ Health check DB probe fails under SQLAlchemy 2.x        │ api (Python)       │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤
+│ 60  │ Faithfulness checker crashes on text: None              │ rag (Python)       │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤
+│ 69  │ Output parser crashes on JSON array fallback            │ rag (Python)       │
+├─────┼────────────────────────────────────────────────────┤
+│ 68  │ Keyword search ZeroDivisionError on empty index         │ rag (Python)       │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤
+│ 56  │ Structural chunker drops headingless docs               │ ingestion (Python) │
+├─────┼────────────────────────────────────────────────────┤
+│ 54  │ Resume section detection fails on leading whitespace    │ ingestion (Python) │
+├─────┼────────────────────────────────────────────────────┤
+│ 57  │ Tech detector counts vendored files                     │ agent (Python)     │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤
+│ 53  │ PII scrubber misses parenthesized phone numbers         │ safety (Python)    │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤
+│ 26  │ Add safety event count to health check                  │ safety (Python)    │                           ├─────┼────────────────────────────────────────────────────┤
+│ 15  │ Agent session state not cleared between reviews         │ agent (Python)     │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤
+│ 18  │ Repo analyzer never receives file list                  │ agent (Python)     │                           ├─────┼────────────────────────────────────────────────────┤
+│ 37  │ API reference missing POST /profiles schema             │ docs               │                           ├─────┼────────────────────────────────────────────────────┤
+│ 36  │ POST /reviews has no test for empty-doc profile         │ api/docs/tests     │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤
+│ 47  │ API docs missing curl examples                          │ docs               │                           ├─────┼────────────────────────────────────────────────────┤
+│ 73  │ README/.env.example disagree on API key                 │ docs               │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤
+│ 11  │ Architecture doc missing hybrid retrieval formula       │ docs               │                           ├─────┼────────────────────────────────────────────────────┤
+│ 12  │ Add snapshot tests for prompt templates                 │ rag/tests          │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤                           │ 63  │ README scorer fixture too short for o              │
+├─────┼─────────────────────────────────────────────────────────┼────────────────────┤
+│ 64  │ Relevance scorer fixture has full overlap, not partial  │ tests              │
+└─────┴─────────────────────────────────────────────────────────┴────────────────────┘
+
+Small backend Python bugs (#72, #62, #61, #60, #69, #68) are the tightest fit for your profile — self-contained, testable, no frontend/TS needed but plenty of
+
+Tier 2 — accepted but no good first issue label (50 issues, #1–#10, #13–#14, #16–#17, #19–#25, #27–#35, #38–#46, #48–#51, #55, #58–#59, #65–#67, #70–#71): stiks, just not flagged as beginner-friendly bythe maintainers — includes several Python/TS-relevant ones like #55 (skill extractor misses JS/TS), #65 (async mock test failures), #66 (structlog/caplog), #39–#42 (frontend/React).
+
+Full per-issue results saved to results_live.json. 

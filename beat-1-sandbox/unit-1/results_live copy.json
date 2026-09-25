@@ -1,0 +1,2700 @@
+[
+  {
+    "issue-title": "Architecture doc doesn't explain the hybrid retrieval scoring formula",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/11",
+    "issue-number": "11",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add snapshot tests for prompt templates to catch accidental changes",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/12",
+    "issue-number": "12",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Agent session state is not cleared between reviews for the same user",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/15",
+    "issue-number": "15",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Repo analyzer never receives a file list, so `has_tests` and `has_ci` are always `False`",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/18",
+    "issue-number": "18",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a safety event count to the health check endpoint",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/26",
+    "issue-number": "26",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "`POST /reviews` endpoint has no test for when the profile has no ingested documents",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/36",
+    "issue-number": "36",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "API reference doc is missing the `POST /profiles` request body schema",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/37",
+    "issue-number": "37",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "API docs don't include example `curl` commands",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/47",
+    "issue-number": "47",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "PII scrubber fails to redact parenthesized US phone numbers",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/53",
+    "issue-number": "53",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Resume section detection fails on text with leading whitespace",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/54",
+    "issue-number": "54",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Structural chunker silently drops documents that contain no headings",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/56",
+    "issue-number": "56",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Tech detector counts vendored and build-output files, skewing language detection",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/57",
+    "issue-number": "57",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Faithfulness checker crashes when a context chunk has `text: None`",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/60",
+    "issue-number": "60",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Health check DB probe passes a raw SQL string, which fails under SQLAlchemy 2.x",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/61",
+    "issue-number": "61",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Health check references `settings.redis_host`, which does not exist on Settings",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/62",
+    "issue-number": "62",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "README scorer test fixture is too short for its own word-count assertion",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/63",
+    "issue-number": "63",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Relevance scorer \u201cpartial overlap\u201d test fixture actually has full query overlap",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/64",
+    "issue-number": "64",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Keyword search raises `ZeroDivisionError` when the index is empty",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/68",
+    "issue-number": "68",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Output parser crashes on a top-level JSON array fallback",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/69",
+    "issue-number": "69",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "`verify_password` raises `UnknownHashError` on malformed stored hashes instead of returning False",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72",
+    "issue-number": "72",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "README and `.env.example` disagree about which LLM API key to set",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/73",
+    "issue-number": "73",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Duplicate embeddings generated when re-ingesting the same repository",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/1",
+    "issue-number": "1",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add support for ingesting a portfolio website URL",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/2",
+    "issue-number": "2",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a content hash to detect unchanged documents and skip re-embedding",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/3",
+    "issue-number": "3",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add support for parsing GitHub Actions workflow files to detect CI/CD skills",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/4",
+    "issue-number": "4",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add end-to-end ingestion test with a sample resume fixture",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/5",
+    "issue-number": "5",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Hybrid retriever skips keyword indexing and normalizes BM25 scores per batch",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/6",
+    "issue-number": "6",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Vector store returns stale embeddings after a document is re-ingested",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/7",
+    "issue-number": "7",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Review generator never combines feedback across a user's projects",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/8",
+    "issue-number": "8",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Implement a caching layer for repeated identical portfolio queries",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/9",
+    "issue-number": "9",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Implement a re-ranking step that uses an LLM to score retrieved chunks before generation",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/10",
+    "issue-number": "10",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add an integration test that runs the full RAG pipeline against a mock LLM",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/13",
+    "issue-number": "13",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Implement an offline eval runner that measures review quality across a benchmark portfolio set",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/14",
+    "issue-number": "14",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Failed tool calls recorded in `tool_results` never reach the review output",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/16",
+    "issue-number": "16",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Agent state isn't persisted across API restarts, causing in-progress reviews to be lost",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/17",
+    "issue-number": "17",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a `contribution_streak` field to the GitHub analysis (longest consecutive days of commits)",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/19",
+    "issue-number": "19",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Implement a `DependencyAuditTool` that flags outdated major dependencies in project repos",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/20",
+    "issue-number": "20",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a plan validation step that checks tool prerequisites before executing the plan",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/21",
+    "issue-number": "21",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a mock GitHub API server for integration tests",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/22",
+    "issue-number": "22",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add an end-to-end agent test using a fully stubbed tool suite",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/23",
+    "issue-number": "23",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Injection detection misses role-switch lines with whitespace before the colon",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/24",
+    "issue-number": "24",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Safety monitoring doesn't emit metrics when the content filter is bypassed by a multi-turn conversation",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/25",
+    "issue-number": "25",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a \"feedback tone check\" that ensures all generated feedback is written constructively",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/27",
+    "issue-number": "27",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add rate limiting per IP address in addition to per user",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/28",
+    "issue-number": "28",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Implement a red-teaming test suite for the prompt injection defense",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/29",
+    "issue-number": "29",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a bias audit report that runs over a sample of stored reviews",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/30",
+    "issue-number": "30",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add integration tests for the full safety middleware chain",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/31",
+    "issue-number": "31",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "`DELETE /profiles/{profile_id}` leaves the profile's embeddings in the vector store",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/32",
+    "issue-number": "32",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Concurrent review requests for the same profile can produce inconsistent results",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/33",
+    "issue-number": "33",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add an API rate limiting header (`X-RateLimit-Remaining`) to responses",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/34",
+    "issue-number": "34",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Implement a webhook system that notifies users when their review is ready",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/35",
+    "issue-number": "35",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add integration tests for authentication edge cases",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/38",
+    "issue-number": "38",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Review progress indicator doesn't update in real time during long-running reviews",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/39",
+    "issue-number": "39",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a \"Copy link\" button to share a public review summary",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/40",
+    "issue-number": "40",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a before/after comparison view for users who have completed multiple reviews",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/41",
+    "issue-number": "41",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add accessibility tests for the review page using `jest-axe`",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/42",
+    "issue-number": "42",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Test coverage for `core/services/review_service.py` is below 40%",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/44",
+    "issue-number": "44",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "No property-based tests for the PII scrubber",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/45",
+    "issue-number": "45",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a performance benchmark for the ingestion pipeline to detect regressions",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/46",
+    "issue-number": "46",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add `Args:`/`Returns:`/`Raises:` sections to the public function docstrings in `core/services/`",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/48",
+    "issue-number": "48",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Write a contributor onboarding guide that walks through a complete issue \u2192 PR lifecycle",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/49",
+    "issue-number": "49",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a dependency vulnerability scan to the CI pipeline",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/50",
+    "issue-number": "50",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Add a database migration validation step to CI that checks all migrations can be applied cleanly",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/51",
+    "issue-number": "51",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Skill extractor fails to detect JavaScript and TypeScript",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/55",
+    "issue-number": "55",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Bias detector patterns are too narrow to match common phrasings",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/58",
+    "issue-number": "58",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Faithfulness checker scores claims unsupported when the context uses different words",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/59",
+    "issue-number": "59",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "review_service unit tests misconfigure async mocks \u2014 13 of 19 tests fail",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/65",
+    "issue-number": "65",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "structlog output is not captured by pytest caplog \u2014 log assertions fail suite-wide",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/66",
+    "issue-number": "66",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Review creation does not verify profile ownership",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/67",
+    "issue-number": "67",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "README parser test fixture is indented, so it contains no headings",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/70",
+    "issue-number": "70",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Heading hierarchy test fixture is indented, so it contains no headings",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/71",
+    "issue-number": "71",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "3 of last 5 default-branch commits are within 90 days (2026-09-16 x3, vs today 2026-09-18)"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "fail",
+        "evidence": "last 5 issues (#69-#73) each have 0 comments \u2014 no maintainer reply within 90 days"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GET /releases/latest returned 404 Not Found \u2014 repo has no releases"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels do not include 'good first issue'"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "repo has 0 PRs (open or closed) in total \u2014 linked_prs is empty and issue state is 'open'"
+      },
+      {
+        "name": "fits-my-style",
+        "grade": "pass",
+        "evidence": "docs/CONTRIBUTING.md exists in the repo"
+      }
+    ],
+    "verdict": "accept"
+  }
+]

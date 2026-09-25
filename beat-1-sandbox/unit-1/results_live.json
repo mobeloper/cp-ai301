@@ -1,0 +1,200 @@
+[
+  {
+    "issue-title": "`verify_password` raises `UnknownHashError` on malformed stored hashes instead of returning False",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72",
+    "issue-number": "72",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "commits on 2026-09-16 and 2026-08-24, within 90 days of 2026-09-17"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "unclear",
+        "evidence": "last 5 issues (#69-#73) have zero comments"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GitHub releases API returns an empty list for this repo"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "state OPEN, no cross-referenced/connected PRs in issue timeline, no claim comments"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Keyword search raises `ZeroDivisionError` when the index is empty",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/68",
+    "issue-number": "68",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "commits on 2026-09-16 and 2026-08-24, within 90 days of 2026-09-17"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "unclear",
+        "evidence": "last 5 issues (#69-#73) have zero comments"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GitHub releases API returns an empty list for this repo"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "state OPEN, no cross-referenced/connected PRs in issue timeline, no claim comments"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Output parser crashes on a top-level JSON array fallback",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/69",
+    "issue-number": "69",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "commits on 2026-09-16 and 2026-08-24, within 90 days of 2026-09-17"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "unclear",
+        "evidence": "last 5 issues (#69-#73) have zero comments"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GitHub releases API returns an empty list for this repo"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "state OPEN, no cross-referenced/connected PRs in issue timeline, no claim comments"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "README and `.env.example` disagree about which LLM API key to set",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/73",
+    "issue-number": "73",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "commits on 2026-09-16 and 2026-08-24, within 90 days of 2026-09-17"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "unclear",
+        "evidence": "last 5 issues (#69-#73) have zero comments"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GitHub releases API returns an empty list for this repo"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "state OPEN, no cross-referenced/connected PRs in issue timeline, no claim comments"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "Relevance scorer \u201cpartial overlap\u201d test fixture actually has full query overlap",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/64",
+    "issue-number": "64",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "commits on 2026-09-16 and 2026-08-24, within 90 days of 2026-09-17"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "unclear",
+        "evidence": "last 5 issues (#69-#73) have zero comments"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GitHub releases API returns an empty list for this repo"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "state OPEN, no cross-referenced/connected PRs in issue timeline, no claim comments"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "pass",
+        "evidence": "labels include 'good first issue'"
+      }
+    ],
+    "verdict": "accept"
+  },
+  {
+    "issue-title": "review_service unit tests misconfigure async mocks — 13 of 19 tests fail",
+    "issue-url": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/65",
+    "issue-number": "65",
+    "checks": [
+      {
+        "name": "maintainer-alive",
+        "grade": "pass",
+        "evidence": "commits on 2026-09-16 and 2026-08-24, within 90 days of 2026-09-17"
+      },
+      {
+        "name": "responds-to-issues",
+        "grade": "unclear",
+        "evidence": "last 5 issues (#69-#73) have zero comments"
+      },
+      {
+        "name": "shiped-recently",
+        "grade": "fail",
+        "evidence": "GitHub releases API returns an empty list for this repo"
+      },
+      {
+        "name": "unclaimed",
+        "grade": "pass",
+        "evidence": "state OPEN, no cross-referenced/connected PRs in issue timeline, no claim comments"
+      },
+      {
+        "name": "good-to-start",
+        "grade": "fail",
+        "evidence": "labels are 'bug', 'tests', 'tier-1' — no 'good first issue' label"
+      }
+    ],
+    "verdict": "reject"
+  }
+]
