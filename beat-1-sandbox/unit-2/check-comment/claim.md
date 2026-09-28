@@ -1,0 +1,1 @@
+Picking this up: `verify_password()` currently lets `UnknownHashError` escape when the stored hash is malformed. I’ll verify the behavior against the existing `H-05` test, update the handling so malformed hashes return `False`, and remove the `xfail` marker once the test passes.
