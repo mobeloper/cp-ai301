@@ -1,0 +1,23 @@
+Skill uploaded to tools/plan-check/ — 2pts
+
+Rubric in tools/plan-check/rubric.md filled in the required format — 4pts
+
+Evidence guide and procedure filled in tools/plan-check/ — 2pts
+
+Eval run committed to beat-1-sandbox/unit-3/eval-run.txt — 3pts
+
+Run history listed in plan-and-implement.md — 2pts
+
+Package analysis written in plan-and-implement.md — 2pts
+
+Check rationale quoted in plan-and-implement.md — 2pts
+
+Trade-offs noted in plan-and-implement.md — 1pt
+
+Plan comment link and text pasted in plan-and-implement.md — 2pts
+
+Branch name recorded in plan-and-implement.md — 1pt
+
+Plan committed to beat-1-sandbox/unit-3/plan.md — 2pts
+
+Test evidence pasted in plan-and-implement.md — 2pts
