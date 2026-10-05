@@ -26,14 +26,55 @@ https://github.com/codepath/pathreview-ai301-fa26-s3
 6. DONE! Run the eval harness: from the eval/ folder of your Unit 3 materials, run python3 run_eval.py --rubric ~/.claude/skills/plan-check/rubric.md --evidence ~/.claude/skills/plan-check/references/evidence-guide.md --save-run eval-run.txt. This full run grades the 20 scored practice submissions with your files (it finds procedure.md next to your rubric), compares each verdict with the gold labels (the staff answer key), and saves the results to eval-run.txt in that folder. After each full run, revise, re-grade only the ones you disagreed on (Retries below says how), then run in full again. Keep going until 18 of the 20 agree with the gold labels and every category on the output's categories: line has at least one match. The eval-run.txt from your last full run is the file you submit.
 
 
-Write your plan: work in the top folder of your fork's clone.My fork clone repo is here https://github.com/mobeloper/pathreview/tree/main. Create plan.md there and, working from the repro comment you posted in unit 2, write your diagnosis, your scope (what you'll change and what you won't), the files you'll touch, your approach, your test plan (your unit 2 repro steps re-run, with what you expect to see after the fix), and your risks and unknowns. Quote the repro evidence you rely on, because the skill grades only what your drafts contain. End plan.md with a ## Deviations heading, which you fill in after the build. Then draft your plan comment in comment.md, in the same folder.
+7. DONE! Write your plan: work in the top folder of your fork's clone. My fork clone repo is here https://github.com/mobeloper/pathreview/tree/main. Create plan.md there and, working from the repro comment you posted in unit 2 located here: https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72#issuecomment-5865096659 , write your diagnosis, your scope (what you'll change and what you won't), the files you'll touch, your approach, your test plan with reproduction steps re-run, with what you expect to see after the fix, and your risks and unknowns. Quote the repro evidence you rely on, because the skill grades only what your drafts contain. End plan.md with a ## Deviations heading, which you fill in after the build. Then draft your plan comment in comment.md, in the same folder.
 
 Don't have a reproduced issue? Ask a TF in #dts-fa26-ai301-solution-planning on Slack for a house issue and its repro pack (the staff's reproduction of that issue). Use the repro pack wherever this page says your unit 2 repro.
 
-Check your plan with your skill: from the top folder of your fork's clone, run claude "plan-check: grade my plan in plan.md and draft comment in comment.md for issue <URL>", with your issue's URL in place of <URL>. It prints a grade for each check and ends with a JSON block whose verdict is accept (ready) or reject (hold). Revise your drafts and re-run until it says accept. If it stops with a message about scope, your Repo: line still has the placeholder (step 1). If you see neither, the skill didn't run.
+8. DONE! Check your plan with your skill: from the top folder of your fork's clone, run claude "plan-check: grade my plan in plan.md and draft comment in comment.md for issue https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72". It prints a grade for each check and ends with a JSON block whose verdict is accept (ready) or reject (hold). Revise your drafts and re-run until it says accept. If it stops with a message about scope, your Repo: line still has the placeholder (step 1). If you see neither, the skill didn't run.
 
-Post your plan comment: post the text of comment.md as a comment on your issue's GitHub thread, then copy the comment's link (its ... menu, then Copy link) for step 12. A classmate's plan on the same issue doesn't block yours, so post your own, built from your own reproduction. "Same approach as above" doesn't count as a plan.
+9. DONE! Post your plan comment: post the text of comment.md as a comment on your issue's GitHub thread, then copy the comment's link: https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72#issuecomment-5986391009 (its ... menu, then Copy link) for step 12. A classmate's plan on the same issue doesn't block yours, so post your own, built from your own reproduction. "Same approach as above" doesn't count as a plan.
 
-Build the change: in your fork's clone, create a branch named with a type prefix (fix/, docs/, feat/, test/, refactor/, perf/, or chore/), your issue number, and a short description, for example fix/1234-null-check. Work through the plan in small steps. Claude makes each edit, and you read every diff before you keep it. Keep plan.md and comment.md out of your commits (check git status before each one), because this branch becomes your pull request in unit 4. If the build ends up different from the plan, write what changed and why under ## Deviations, re-run step 8, and add a comment on the issue if your posted plan is no longer true. If nothing changed, write that under Deviations in your own words.
+10. DONE! Build the change: in your fork's clone, create a branch named with a type prefix (fix/, docs/, feat/, test/, refactor/, perf/, or chore/), your issue number, and a short description, for example fix/1234-null-check. Work through the plan in small steps. Claude makes each edit, and you read every diff before you keep it. Keep plan.md and comment.md out of your commits (check git status before each one), because this branch becomes your pull request in unit 4. If the build ends up different from the plan, write what changed and why under ## Deviations, re-run step 8, and add a comment on the issue if your posted plan is no longer true. If nothing changed, write that under Deviations in your own words.
 
-Run your test plan: re-run your unit 2 repro steps against the change, and save the commands and output from before and after the fix. The before can be the output you posted in unit 2. If your repro can't run against the real change (for example, it was a stand-in script that copied the bug), turn its inputs into a check that runs through the real code, and save that check's before and after instead.
+11. DONE! Run your test plan: re-run your unit 2 repro steps against the change, and save the commands and output from before and after the fix. The before can be the output you posted in unit 2. If your repro can't run against the real change (for example, it was a stand-in script that copied the bug), turn its inputs into a check that runs through the real code, and save that check's before and after instead.
+
+12. Submit: 
+
+Push your branch to your fork: git push -u origin fix/72-hash-error.
+In your course repo on GitHub, open tools/plan-check/, click Add file, then Upload files, and drag in everything from ~/.claude/skills/plan-check/. Include the references folder itself, so evidence-guide.md stays inside it.
+
+Upload eval-run.txt (from the eval/ folder of your Unit 3 materials) and plan.md (from your fork's clone) into beat-1-sandbox/unit-3/ the same way.
+Fill in beat-1-sandbox/unit-3/plan-and-implement.md (open it on GitHub and click the pencil icon). Its fields are listed below.
+
+
+Link to plan in live repo:
+https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72#issuecomment-5986391009
+
+
+
+Opened PR 91 to fix issue #72: 
+https://github.com/codepath/pathreview-ai301-fa26-s3/pull/91 
+
+All checks have passed
+5 successful checks
+
+
+successful checks
+CI / frontend (pull_request)
+CI / frontend (pull_request)Successful in 22s
+Required
+CI / lint (pull_request)
+CI / lint (pull_request)Successful in 10s
+Required
+CI / test-integration (pull_request)
+CI / test-integration (pull_request)Successful in 1m
+Required
+CI / test-unit (pull_request)
+CI / test-unit (pull_request)Successful in 1m
+Required
+CI / typecheck (pull_request)
+CI / typecheck (pull_request)Successful in 1m
+Required
+No conflicts with base branch
+Changes can be cleanly merged.
+

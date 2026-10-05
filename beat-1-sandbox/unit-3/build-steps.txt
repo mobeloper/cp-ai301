@@ -1,0 +1,105 @@
+BUILD steps
+
+* RUN 1: *
+
+Goal: fix issue #72 so verify_password returns False on malformed hashes. The code, tests and Deviations note are done and plan-check accepted. Next, read the two diffs and tell me to commit, without staging plan.md or comment.md. (disable recaps in /config)
+
+--
+
+The plan-check on the updated plan.md and comment.md gives accept. The thread has about 70 comments, all from authors with association none, so there is no maintainer direction to follow.
+
+- diagnosis (pass): The plan names verify_password() calling pwd_context.verify() with no handling, and cites the repro line "raises passlib.exc.UnknownHashError". That matches the issue title and the traceback other students posted. I also reproduced it locally in this session.
+- scope (pass): It names core/security.py and tests/unit/test_security.py, lists what it won't touch (hashing, JWT, CryptContext, other exception types, callers, logging), and gives the reason.
+- changes (pass): Each file has a stated reason. Nothing is added or deleted, and the change is about 15 lines.
+- test (pass): It adds test_verify_password_malformed_hash in tests/unit/test_security.py and removes the xfail marker. I confirmed both tests fail without the fix.
+- comms (pass): No maintainer has stated a direction on the thread. Many students have claimed #72, and house rules say that doesn't block you. The repo has no AI-disclosure policy; I found none in docs/, the PR template or README.md. Others on the thread disclose Claude use anyway, so decide whether you want to.
+
+Voice-guide notes on the draft comment:
+- It breaks "Name the version and behavior": no commit, Python or passlib version is given.
+- Its line "I will re-confirm it with a --runxfail run before changing anything" is now stale, because I ran it, so reword it.
+
+Things to fix before you post or open the PR:
+- Branch name: the scope.md house rule says fix/<issue-number>-<slug>, and fix/issue-72-hash-error doesn't match it. Renaming to fix/72-hash-error would fix it: git branch -m fix/72-hash-error.
+- $2b$12$abc evidence: Two other students' repro comments on the thread show a truncated hash raising a plain ValueError, which except UnknownHashError will not catch. Your plan leaves it out of scope and says you have not checked it. That's honest, but you could cite their evidence in the PR.
+- Tracked files: plan.md and comment.md are already tracked, from commit c457fbd. plan.md now shows as modified from the Deviations edit, so don't stage it.
+- Nothing committed: the diffs for core/security.py and tests/unit/test_security.py are in the working tree for you to read. Tell me when you want the commit.
+
+{
+  "item": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72",
+  "checks": [
+    {"name": "diagnosis", "grade": "pass", "evidence": "Cause: verify_password() calls pwd_context.verify() with no exception handling; repro quote 'raises passlib.exc.UnknownHashError instead of returning False' matches the issue title and traceback."},
+    {"name": "scope", "grade": "pass", "evidence": "Names core/security.py and tests/unit/test_security.py; Not in scope lists hash_password, JWT functions, CryptContext, other exception types, callers, logging; reason: fail-closed verification."},
+    {"name": "changes", "grade": "pass", "evidence": "Files table gives a reason per file, no files added or deleted, roughly 15 lines total."},
+    {"name": "test", "grade": "pass", "evidence": "Adds test_verify_password_malformed_hash in tests/unit/test_security.py with the repro input and removes the strict xfail; new test fails on unfixed code."},
+    {"name": "comms", "grade": "pass", "evidence": "No maintainer direction on the thread (all associations 'none'); comment is the author's own plan from their own repro per house rules; no AI-disclosure policy found in docs/, PR template or README."}
+  ],
+  "verdict": "accept"
+}
+
+
+* RUN 2: *
+
+recap: We're fixing issue 72 so verify_password returns False on malformed hashes. The code, tests, and Deviations are done and plan-check accepts, with the diffs uncommitted on fix/72-hash-error. Next, you read the diffs and I commit the two code files. (disable recaps in /config)
+
+--
+
+The second plan-check, run on the updated plan.md and the same comment.md, also gives accept. I re-graded from the evidence already gathered, since the issue thread, the repo policy and comment.md haven't changed. Only the Deviations section of plan.md changed.
+
+- diagnosis, scope, changes, test (all pass): none of the plan's cause, scope, file list or test sections changed. The new Deviations text is consistent with them. It says the ValueError case for $2b$12$abc stays out of scope because the issue names only UnknownHashError, which matches the Scope section.
+- comms (pass): there is still no maintainer direction and no AI-disclosure rule. The posted comment already says a corrupt bcrypt-looking hash may raise ValueError and is out of scope, so it is still true. No follow-up comment on #72 is needed.
+- Deviations section: it now records the branch rename and the ValueError finding, and says why neither needs a new comment on the issue. That is the honest recording the skill asks for.
+
+Voice-guide notes on the draft comment (still open):
+- It names no commit, Python or passlib version, which breaks "Name the version and behavior".
+- "I will re-confirm it with a --runxfail run before changing anything" is now stale, because that run is done.
+
+Both would need editing in comment.md and in the posted comment if you want them fixed. I haven't touched comment.md.
+
+The branch is fix/72-hash-error, and nothing is committed. Stage only core/security.py and tests/unit/test_security.py, not plan.md. Should I commit those two?
+
+{
+  "item": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72",
+  "checks": [
+    {"name": "diagnosis", "grade": "pass", "evidence": "Cause: verify_password() calls pwd_context.verify() with no exception handling; repro quote 'raises passlib.exc.UnknownHashError instead of returning False' matches the issue title and traceback."},
+    {"name": "scope", "grade": "pass", "evidence": "Names core/security.py and tests/unit/test_security.py; Not in scope lists hash_password, JWT functions, CryptContext, other exception types (ValueError case now checked and deferred), callers, logging; reason: fail-closed verification."},
+    {"name": "changes", "grade": "pass", "evidence": "Files table gives a reason per file, no files added or deleted, roughly 15 lines total."},
+    {"name": "test", "grade": "pass", "evidence": "Adds test_verify_password_malformed_hash in tests/unit/test_security.py with the repro input and removes the strict xfail; new test fails on unfixed code."},
+    {"name": "comms", "grade": "pass", "evidence": "No maintainer direction on the thread (all associations 'none'); comment already says the ValueError case is out of scope; no AI-disclosure policy found in docs/, PR template or README."}
+  ],
+  "verdict": "accept"
+}
+
+
+
+* RUN 3 *
+
+Re run the repro.md against the real code before and after the fix.
+
+I ran the repro against the real code before and after the fix, and the fix works. The commands and output are saved in /Users/EricMichel/projects/pathreview/test-evidence.txt.
+
+The fix was already committed on branch fix/72-hash-error (0eae38a), so I compared it with its parent commit using a temporary checkout, which I removed afterwards. Both runs used the project's .venv.
+
+┌────────────────────────────────┬──────────────────────────┬───────┐
+│             Check              │          Before          │ After │
+├────────────────────────────────┼──────────────────────────┼───────┤
+│ verify_password("test-password │ raises passlib.exc.Unkno │ print │
+│ ",                             │ wnHashError: hash could  │ s     │
+│ "not-a-valid-password-hash")   │ not be identified        │ False │
+├────────────────────────────────┼──────────────────────────┼───────┤
+│ H-05 test (test_verify_with_wr │ FAILED with              │ PASSE │
+│ ong_hash_format), marker       │ UnknownHashError         │ D     │
+│ ignored with --runxfail        │                          │       │
+├────────────────────────────────┼──────────────────────────┼───────┤
+│ New test (test_verify_password │ doesn't exist            │ PASSE │
+│ _malformed_hash)               │                          │ D     │
+├────────────────────────────────┼──────────────────────────┼───────┤
+│ pytest                         │ 24 passed, 1 xfailed     │ 26 pa │
+│ tests/unit/test_security.py    │                          │ ssed  │
+└────────────────────────────────┴──────────────────────────┴───────┘
+
+- Python version: the .venv runs Python 3.13.9 with passlib 1.7.4 and bcrypt 4.3.0. The repro comment you posted listed 3.12.x and CI uses 3.11 or 3.12, so I'd say that in the PR.
+- Not re-run: I didn't run make lint or make typecheck, which the plan lists as checks.
+- Plan and comment files: plan.md and comment.md are in the history of this branch (commit c457fbd, "[add] plan and comment for issue 72"). The assignment says to keep them out of the commits, because this branch becomes your pull request. Before you open it, remove them from the branch history, for example with an interactive rebase.
+- Evidence file: test-evidence.txt is untracked, so keep it out of commits too.
+- Plan not updated: plan.md has uncommitted edits, and I haven't touched it. Its ## Deviations section may need a note on the branch name. The plan says fix/72-verify-password-malformed-hash, but the actual branch is fix/72-hash-error.
+

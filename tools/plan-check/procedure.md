@@ -3,8 +3,8 @@
 Grade one package by running the four stages below in order. Use only
 the evidence the package contains (eval mode: the bundle text, nothing
 fetched or run; live mode: the student's drafts, their posted repro
-comment, and the issue thread). The rubric has four checks, all
-required: `diagnosis`, `scope`, `changes`, `test`. If this procedure is
+comment, and the issue thread). The rubric has five checks, all
+required: `diagnosis`, `scope`, `changes`, `test`, `comms`. If this procedure is
 silent on something, say so in the summary instead of inventing a step.
 
 ## 1. Read order
@@ -21,9 +21,12 @@ silent on something, say so in the summary instead of inventing a step.
 3. **Candidate plan third**, in this order: Diagnosis, Scope, Changes
    (the Files and Approach sections), then Test plan. Note what each
    section claims.
-4. **Candidate plan comment last.** No check grades it; read it only
-   for consistency with the plan and, in live mode, for the voice-guide
-   notes `SKILL.md` asks for. It never changes the verdict.
+4. **Thread highlights and Repo facts, then the candidate plan comment
+   last.** Note any maintainer direction or claimed effort in the
+   thread, and the contribution policy line (who an AI-disclosure rule
+   covers: comments, pull requests, or all AI use). The `comms` check
+   grades the comment against these. In live mode also note the
+   voice-guide points `SKILL.md` asks for.
 
 ## 2. Evidence gathering
 
@@ -38,14 +41,21 @@ is not in the package, record "absent"; do not fetch, run, or invent it.
 - **Diagnosis:** the plan's stated cause, and the evidence it cites for
   it. Record whether the cause agrees with the repro facts and with
   the issue title.
-- **Scope:** every file the plan says it will change, the statement of
-  what it will not touch, and the reason for the changes.
-- **Changes:** per file, the stated reason for modifying it; every file
+- **Scope:** every file, or specific module/component/code path, the
+  plan says it will change, the statement of what it will not touch,
+  and the reason for the changes.
+- **Changes:** per file or area, the stated reason for modifying it; every file
   added or deleted and the justification given; the size of the work
   (from the Approach: "rewrite", new modules, number of files),
   estimated against the 500-line limit.
-- **Test:** where the plan adds a test (the test case and the file it
-  goes in).
+- **Test:** the plan's test: a test it adds (the test case and where it
+  goes), or a repeatable check from the repro steps and the observable
+  result that says it passed. Note if it is only "run the existing or
+  full suite".
+- **Comms:** what the maintainer or thread asked for or settled, and
+  whether the comment responds to it; any claimed or competing effort;
+  whether the policy requires AI-use disclosure covering the comment
+  or plan, and whether the comment states it (quote it).
 
 Then compare the plan with the issue and the repro evidence for
 consistency and alignment.
@@ -68,22 +78,34 @@ without re-reading the whole package.
 
    Fail if the cause or the evidence is missing.
 2. **scope** passes if:
-   - the plan names each file it will change;
+   - the plan names each file it will change, or the specific module,
+     component, or code path where exact files are not yet known;
    - it states what it will not touch;
    - it gives the reasoning for what the changes are for.
 
-   Fail if any is missing. (The not-touching statement is required, as
-   in the rubric.)
+   Fail if any is missing or the location is unbounded ("the
+   codebase"). An honest "exact functions to be pinned after tracing"
+   within a named area passes.
 3. **changes** passes if:
-   - each file to be modified is named with why it is modified;
+   - each file or area to be modified is named with why it is modified;
    - every added or deleted file has a stated justification;
    - the change is minimal (under 500 lines).
 
    Fail if any is missing, an add/delete is unjustified, or the change
    is 500 lines or more.
-4. **test** passes if the plan adds a test (a new or extended test
-   case, naming where it goes). Fail if it has no test, or only says
-   to run existing tests or check manually.
+4. **test** passes if the plan has a decisive test: it adds an
+   automated test (naming where it goes), or, when automation is not
+   practical, gives a repeatable check from the repro steps with an
+   observable pass result that would differ on the unfixed code. Fail
+   if it only says to run the existing or full suite, to "verify it
+   works", or names no test.
+5. **comms** passes if the comment engages what the maintainer asked
+   for or settled and does not duplicate a claimed effort, AND, where
+   the policy requires AI-use disclosure covering the comment or plan,
+   the comment states it (every plan is treated as AI-assisted). A
+   pull-request-only disclosure rule does not fail the comment. Fail
+   if it ignores an explicit maintainer direction or claimed effort,
+   or omits a required disclosure.
 
 Judge the outcome, not the polish: a short plan that meets a condition
 passes, and a long confident one that does not, fails. One check's
@@ -91,13 +113,13 @@ result never changes another's.
 
 ## 4. Verdict assembly
 
-1. Apply the rubric's verdict rule: `accept` if all four checks are
+1. Apply the rubric's verdict rule: `accept` if all five checks are
    `pass`; otherwise `reject`. Preferred checks do not exist and never
    change the verdict.
 2. `unclear` counts as `fail`, so any `fail` or `unclear` rejects.
 3. In the summary, quote the deciding evidence for the first failing
    check in execution order; if all pass, quote the diagnosis evidence.
-4. Finish with the JSON block `SKILL.md` requires (`item`, the four
+4. Finish with the JSON block `SKILL.md` requires (`item`, the five
    checks named exactly as in the rubric, each with a one-line
    `evidence`, and `verdict`) as the last thing in the output.
 5. List any procedure gaps you hit.
