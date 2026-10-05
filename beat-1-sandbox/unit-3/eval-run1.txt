@@ -1,4 +1,4 @@
-# eval run written by run_eval.py at 2026-10-05T00:37:20Z
+# eval run written by run_eval.py at 2026-10-05T00:29:55Z
 # model: sonnet (pinned)
 # graded: /Users/EricMichel/.claude/skills/plan-check
 # packages: 20 scored
@@ -13,19 +13,19 @@ grading 20 package(s) with rubric.md + evidence-guide.md + procedure.md, model s
   pkg-03: accept
   pkg-05: accept
   pkg-04: reject
-  pkg-08: accept
   pkg-06: reject
+  pkg-08: accept
+  pkg-10: reject
   pkg-07: reject
   pkg-09: accept
-  pkg-10: reject
   pkg-11: reject
-  pkg-12: reject
   pkg-13: accept
   pkg-14: accept
+  pkg-12: reject
   pkg-15: reject
   pkg-17: reject
-  pkg-16: reject
   pkg-18: reject
+  pkg-16: reject
   pkg-20: reject
   pkg-19: reject
 

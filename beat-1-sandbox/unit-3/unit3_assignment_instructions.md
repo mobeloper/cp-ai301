@@ -1,5 +1,7 @@
 # Assignment 3: Plan and Build
 
+https://courses.codepath.org/courses/ai301/unit/3#!projects
+
 Steps 1-6 build and test your skill, 7-11 plan and build your fix, and 12 submits.
 
 
@@ -24,7 +26,7 @@ https://github.com/codepath/pathreview-ai301-fa26-s3
 6. DONE! Run the eval harness: from the eval/ folder of your Unit 3 materials, run python3 run_eval.py --rubric ~/.claude/skills/plan-check/rubric.md --evidence ~/.claude/skills/plan-check/references/evidence-guide.md --save-run eval-run.txt. This full run grades the 20 scored practice submissions with your files (it finds procedure.md next to your rubric), compares each verdict with the gold labels (the staff answer key), and saves the results to eval-run.txt in that folder. After each full run, revise, re-grade only the ones you disagreed on (Retries below says how), then run in full again. Keep going until 18 of the 20 agree with the gold labels and every category on the output's categories: line has at least one match. The eval-run.txt from your last full run is the file you submit.
 
 
-7. Write your plan: work in the top folder of your fork's clone.My fork clone repo is here https://github.com/mobeloper/pathreview/tree/main. Create plan.md there and, working from the repro comment you posted in unit 2, write your diagnosis, your scope (what you'll change and what you won't), the files you'll touch, your approach, your test plan (your unit 2 repro steps re-run, with what you expect to see after the fix), and your risks and unknowns. Quote the repro evidence you rely on, because the skill grades only what your drafts contain. End plan.md with a ## Deviations heading, which you fill in after the build. Then draft your plan comment in comment.md, in the same folder.
+Write your plan: work in the top folder of your fork's clone.My fork clone repo is here https://github.com/mobeloper/pathreview/tree/main. Create plan.md there and, working from the repro comment you posted in unit 2, write your diagnosis, your scope (what you'll change and what you won't), the files you'll touch, your approach, your test plan (your unit 2 repro steps re-run, with what you expect to see after the fix), and your risks and unknowns. Quote the repro evidence you rely on, because the skill grades only what your drafts contain. End plan.md with a ## Deviations heading, which you fill in after the build. Then draft your plan comment in comment.md, in the same folder.
 
 Don't have a reproduced issue? Ask a TF in #dts-fa26-ai301-solution-planning on Slack for a house issue and its repro pack (the staff's reproduction of that issue). Use the repro pack wherever this page says your unit 2 repro.
 

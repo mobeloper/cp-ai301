@@ -1,5 +1,7 @@
 EVAL RUN HISTORY
 
+ python3 run_eval.py --rubric ~/.claude/skills/plan-check/rubric.md --evidence ~/.claude/skills/plan-check/references/evidence-guide.md --save-run eval-run.txt
+
 * RUN 1: *
 
 The eval ran on all 20 scored packages: agreement is 18/20, which meets the 18/20 bar. The run is saved to unit-3/eval-run.txt.
