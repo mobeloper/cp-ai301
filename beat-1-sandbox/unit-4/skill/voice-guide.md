@@ -101,6 +101,38 @@ If I have confirmed the behavior but not the root cause, I say so. I distinguish
 Wrong: "The problem is definitely caused by the new parser."
 Right: "The regression appears after the parser change, but I have not confirmed the root cause yet."
 
+
+### Rule: Title says what changed and where (PR title)
+
+The PR title names the behavior that changed and the function or file it changed in, in one line. It does not use "fix bug," "updates," or the issue number alone.
+
+Wrong: "Fix bug in security"
+Right: "fix: return False from verify_password on malformed stored hash"
+
+
+### Rule: Claim only what the diff does (PR description)
+
+Every sentence in the Summary and every Changes bullet must be visible in the diff, and every behavior change in the diff must be described. I never write "implements the plan exactly" or "no other changes" unless I have checked the diff against my plan.
+
+Wrong: "Implements the plan exactly, with no other changes."
+Right: "Changes core/security.py and tests/unit/test_security.py. The only difference from my plan is the branch name, recorded under Deviations."
+
+
+### Rule: Show test output, not test claims (PR description)
+
+In Testing I paste the before and after output and each check's result. I do not write "tested locally" or "all tests pass" with nothing shown, and I tick only the boxes the pasted output supports.
+
+Wrong: "Tested locally, all tests pass."
+Right: "Before: --runxfail raises UnknownHashError. After: pytest tests/unit/test_security.py, 26 passed. make lint and make typecheck pass."
+
+
+### Rule: Say what I left out and what I used AI for (PR description)
+
+In Notes for Reviewers I state in my own words how I used AI on the change, and I name anything I left out on purpose or changed from my plan, with the reason. I do not hide a shortfall or leave it for the reviewer to find.
+
+Wrong: "AI-assisted." / "Ready for review!"
+Right: "I used Claude Code to draft my plan and check this description against my diff; I ran the commands and read the diff myself. I left ValueError out of scope because the issue names only UnknownHashError."
+
 ## Things I never post
 
 <!-- A short list. Promises you cannot keep, tones you refuse,
@@ -118,4 +150,9 @@ list back at you when a draft crosses it. -->
 - Passive-aggressive comments about maintainers or previous responses.
 - Bot-like phrases such as "I hope this message finds you well" or generic AI-generated filler.
 - Comments that sound like I am trying to impress the maintainer rather than help diagnose the issue.
+- A PR title like "fix bug" or "updates" that does not say what changed and where.
+- "Implements the plan exactly" or "no other changes" without checking the diff.
+- "Tested locally" or "all tests pass" with no output shown, or a ticked Testing box the output does not support.
+- A bare "AI-assisted" instead of saying how I used AI, or any sign that I am hiding something I left out.
+- Promising follow-up PRs or a timeline for them ("I'll send another PR for that tomorrow").
 

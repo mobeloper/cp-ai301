@@ -1,0 +1,88 @@
+Skill(pr-precheck)
+Successfully loaded skill
+
+Live mode. Starting with scope.md, as the skill directs.
+
+  Read 3 files
+
+Scope repo is filled in. Now the voice guide, the evidence guide, and the package inputs.
+
+  Read 5 files, ran 3 shell commands
+
+pr-precheck, live mode. Scope is OK: the repo matches codepath/pathreview-ai301-fa26-s3 and the issue is #72. The thread has no maintainer comments. git diff main...HEAD touches only core/security.py and tests/unit/test_security.py, with 1 commit.
+
+Verdict: reject (hold). The first failing required check is test-evidence. test_evidence.md doesn't hold captured before/after output. It holds an agent transcript that contradicts the PR.
+
+Check: diff-matches-plan
+Grade: pass
+Evidence: The two changed files are the two planned files. The UnknownHashError catch, the docstring line, the marker removal and
+the one new test are all there. The branch-name deviation is recorded in plan.md.
+────────────────────────────────────────
+Check: description-matches-diff
+Grade: pass
+Evidence: Every Changes bullet is visible in the di claim holds.
+────────────────────────────────────────
+Check: test-evidence
+Grade: fail
+Evidence: test_evidence.md says "The grep found no issue #72: marker… I deleted nothing" and "Issue #72 doesn't appear to be one of
+the seeded bugs". The diff deletes the @pytest.mark="issue #72 …") block. The file has no pasted
+--runxfail before output or after output. The "before" exists only as prose in pr_draft.md and plan.md.
+────────────────────────────────────────
+Check: repo-checks
+Grade: fail
+Evidence: The unit, lint, typecheck and integration results are pasted ("377 passed, 52 xfailed", "All checks passed!", "Success:
+no issues found", "no tests ran … Error 5"). But th pr_draft.md is contradicted by test_evidence.md,
+which says nothing was removed.
+────────────────────────────────────────
+Check: clean-diff
+Grade: pass
+Evidence: Every hunk serves the planned change. Thed, pr_draft.md and test_evidence.md are notcommitted.
+────────────────────────────────────────
+Check: template-complete
+Grade: fail
+Evidence: All sections are filled and Closes #72 is correct. The seeded-bug box is ticked while the evidence says no marker was
+found or deleted. The <!-- How did you verify… --> comment is also left in.
+────────────────────────────────────────
+Check: ai-disclosure
+Grade: pass
+Evidence: "I used Claude Code to help write my plana rubric, and review this description against mydiff.
+I read the diff and ran the commands myself."
+────────────────────────────────────────
+Check: title-and-issue (preferred)
+Grade: pass
+Evidence: "fix: return False from verify_password on malformed stored hash", with Closes #72.
+
+Voice-guide notes (these don't change the verdict):
+- "Show test output, not test claims": the description's Before is a claim, "raises passlib.exc.UnknownHashError", with no pasted
+  output.
+- "Claim only what the diff does": the Testing box for the seeded-bug marker is ticked, and the evidence says otherwise.
+
+What to fix:
+1. test_evidence.md:
+   - It looks like a re-run on the already-fixed branch. Its grep used "issue #72:" with a colon, but the marker reason reads issue #72 (manifest H-05). It found nothing and concluded there was no seeded marker. That conclusion is wrong, because your
+     diff removes exactly that marker.
+   - Replace the file with real captured output. Include the --runxfail run on unfixed main (the before), the new test failing on old code, and the after runs of all four checks.
+   - Include the grep or the git diff showing the xfail removal.
+2. pr_draft.md: Once the evidence is real, the ticked box will be supported. Paste the before output into Testing and delete the
+   leftover template comment.
+
+Procedure gaps: none hit. The evidence guide refers used the repo-root files you named.
+
+{
+  "item": "https://github.com/codepath/pathreview-ai301-fa26-s3/issues/72",
+  "checks": [
+    {"name": "diff-matches-plan", "grade": "pass", only core/security.py andtests/unit/test_security.py, the two planned files; catch, docstring, marker removal and one new test all present; branch rename recorded under Deviations."},
+    {"name": "description-matches-diff", "grade": "pass", "evidence": "Each Changes bullet is visible in the diff and the 'matches
+the plan' claim is true of it."},
+    {"name": "test-evidence", "grade": "fail", "evidence": "test_evidence.md is an agent transcript with no before/after output
+and says 'I deleted nothing' and 'doesn't appear to', while the diff removes the issue #72 xfailmarker."},
+    {"name": "repo-checks", "grade": "fail", "evideasted, but the ticked seeded-bug marker box iscontradicted by test_evidence.md ('I deleted nothing')."},
+    {"name": "clean-diff", "grade": "pass", "evidene planned change; no debug output, dead code, churnor stray files."},
+    {"name": "template-complete", "grade": "fail", "evidence": "Sections filled and Closes #72 correct, but the ticked seeded-bug box is contradicted by the evidence and a template comment is left in Testing."},
+    {"name": "ai-disclosure", "grade": "pass", "evidence": "Notes for Reviewers: 'I used Claude Code to help write my plan, check
+my drafts against a rubric, and review this descrip
+    {"name": "title-and-issue", "grade": "pass", "evidence": "Title 'fix: return False from verify_password on malformed stored
+hash' matches the diff; Closes #72."}
+  ],
+  "verdict": "reject"
+}
