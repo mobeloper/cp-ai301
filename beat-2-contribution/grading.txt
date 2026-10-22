@@ -1,0 +1,62 @@
+Assignment 5: Contribution Repository (units 5-8)
+Total Points: 250pts
+
+Required Features:
+
+Every row reads beat-2-contribution/contribution-story.md unless it says otherwise.
+
+Ten template sections present in contribution-story.md — 10pts
+
+Issue and Pull Request links recorded in the header — 10pts
+
+Understanding the Issue section answered in full — 10pts
+
+Why I Chose This Issue answered in your own words — 20pts
+
+How the scout was used, described in the Toolkit thread — 15pts
+
+Reflection on the scout, written in the Toolkit thread — 15pts
+
+Environment Setup described in contribution-story.md — 10pts
+
+Reproduction steps and evidence shown in contribution-story.md — 15pts
+
+Analysis and Implementation Plan named by file and function — 15pts
+
+Testing Strategy names both observable checks — 10pts
+
+Issue and pull request point to the same repository — 4pts
+
+Pull request description names its issue — 4pts
+
+Claim recorded via a link or a comment under your GitHub username — 4pts
+
+Pull request description filled out on GitHub — 12pts
+
+Pull request shows repro and check evidence — 18pts
+
+Pull request diff is clean and accounted for — 18pts
+
+
+The Toolkit thread and your learnings:
+
+
+Seven story sections carry a Toolkit block: Why I Chose This Issue; Understanding the Issue; Reproduction Process; Solution Approach; Testing Strategy; Implementation Notes; Pull Request. Each block has four lines, and each line is its own row below.
+
+Tool named in every Toolkit block — 4pts
+
+What it produced, named in every Toolkit block — 4pts
+
+Difficulties named in every Toolkit block — 4pts
+
+What changed, named in every Toolkit block — 4pts
+
+Toolkit reflections name concrete moments — 12pts
+
+Weekly Toolkit entries record real tool work — 12pts
+
+Learnings and Reflections name real events — 12pts
+
+Implementation Notes kept as a dated log — 4pts
+
+Resources Used names a real resource — 4pts

@@ -57,7 +57,7 @@ one in the week it belongs to.
 
 **Unit 5: Wrote the issue-scout strategy and patched its search, ranking and rubric until a scan surfaced a real issue**
 
-I wrote a search strategy of 15 queries across agentic-AI orgs and repos, with ranking filters and a rubric. The first scan graded nothing: the top 5 were unrelated repos, and I first blamed multi-owner `--owner` lists, but testing showed they filter correctly. The real cause was the example line inside the strategy's HTML comment, which began with `gh search issues` and ran as an unscoped query. Fixing that, then logging each query's command and count, adding an owner/repo allowlist filter, ranking `bug`-labelled issues ahead of `good first issue`, and clarifying two rubric checks (maintainer self-replies, maintainer issue-plus-PR batches) produced the first accepted candidate, **langchain-ai/openwiki#1066.**
+I wrote a search strategy of 15 queries across agentic-AI orgs and repos, with ranking filters and a rubric. The first scan graded nothing: the top 5 were unrelated repos, and I first blamed multi-owner `--owner` lists, but testing showed they filter correctly. The real cause was the example line inside the strategy's HTML comment, which began with `gh search issues` and ran as an unscoped query. Fixing that, then logging each query's command and count, adding an owner/repo allowlist filter, ranking `bug`-labelled issues ahead of `good first issue`, and clarifying two rubric checks (maintainer self-replies, maintainer issue-plus-PR batches) produced the first accepted candidate, **[langchain-ai/openwiki#1066](https://github.com/langchain-ai/openwiki/issues/1066).**
 
 **Unit 6: [one line on the tool work]**
 
