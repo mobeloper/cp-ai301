@@ -1,23 +1,27 @@
 # Scope: where to look, and who is looking
 
+
 ## Where candidates come from
 
-Only issues in the course's Path Review repository are candidates:
+Any public repository. The sandbox is behind you; the field is now
+all of GitHub, and your fit profile below is what keeps that
+searchable. Start from repos in languages and tools you named there,
+and let the profile steer where you search, not just how results are
+ranked.
 
-- Repo: `codepath/pathreview-ai301-fa26-s3`
+**Claims count again.** The Path Review house rule does not travel.
+Out here a claim comment or an assignee is a stranger who got there
+first, and you have no channel to coordinate with them. Read claim
+signals exactly as the rubric's checks state them; do not carry the
+classroom habit of claiming over someone.
 
-Do not search, fetch, or grade issues from any other repository, however
-promising. The wider GitHub comes later in the course; for now the field
-is Path Review.
+**Claim upstream the moment you commit.** The rule cuts both ways:
+the instant you decide to take an issue, say so on the issue itself
+(a short comment: what you plan to do and roughly when). You are now
+the claim signal someone else's skill will read. Deciding privately
+and claiming later is how two strangers do the same work twice.
 
-**Path Review house rule.** Path Review is a classroom, and your
-classmates are not strangers. Ignore the usual claim signals here: other
-students' claim comments (and there may be several on one issue) do not
-block an issue, and finding some on the issue you want is normal. Claim
-anyway: course credit attaches to the pull request you open, not to
-whether it merges, so a shared issue costs nobody anything. Everything
-else in the rubric applies as written.
+## Your fit profile (kept in sync with issue-scout/scope.md)
 
-## Your fit profile
 
-I have used python and typescript. Avoid java or other languages. Both frontend and backend issues are interesting to me.
+I write python, javascript, typescript, css, scss, html, java, react, and dockerfile languages. Avoid other languages (go, c++, rust). Avoid any issue that needs special hardware (GPU, TPU, accelerators, special devices). I like working with repos about reputable agentic AI tools and libraries, and with large established open-source orgs: pytorch, open-telemetry, apache, opensearch-project, backstage, kubernetes, openedx, and hackforla. I look for issues labelled good first issue, help wanted, bug, or easy. Both frontend and backend issues are interesting to me. I want small bug fixes that I can finish in two weeks or less with easy difficulty, not a new feature. I want an active repo project where people answer questions. I develop on a MacBook Pro (macOS), so avoid any issue that is Windows-only or tied to another OS or platform (Linux-only, Android, iOS, WSL); an issue that also reproduces on macOS is fine. Many repos on my list do not maintain a good first issue label, or have heavy PR competition, so the cleanest path to a merge is an isolated fix: a self-contained bug fix, a schema or input validation tweak, or a test gap, touching one module and needing no design discussion. A docs gap counts only when the ticket also needs a test or code change; documentation-only tickets (docs, docstring, README or typo-only) are excluded.

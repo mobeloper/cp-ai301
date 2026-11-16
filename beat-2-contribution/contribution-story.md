@@ -1,4 +1,5 @@
-# Contribution: [Issue Title]
+# Contribution: Add a synthetic free-text quasi-identifier fixture set
+ #5296
 
 Path: `beat-2-contribution/contribution-story.md`
 
@@ -8,10 +9,9 @@ format criteria grade exactly that. Your course repo link is the whole submissio
 files and no evidence uploads are part of Assignment 5.
 
 **Contribution Number:** [1]
-**Student:** [Student name]
-**GitHub Username:** [your GitHub username, exactly as it appears on your profile - no @, no
-profile URL. Your comments upstream are identified by this name.]
-**Issue:** [GitHub issue link]
+**Student:** Eric Michel
+**GitHub Username:** mobeloper
+**Issue:** https://github.com/maziyarpanahi/openmed/issues/5296
 **Pull Request:** [GitHub PR link, once opened]
 
 One repository, built across units 5 to 8, telling the whole story of your real
@@ -57,7 +57,7 @@ one in the week it belongs to.
 
 **Unit 5: Wrote the issue-scout strategy and patched its search, ranking and rubric until a scan surfaced a real issue**
 
-I wrote a search strategy of 15 queries across agentic-AI orgs and repos, with ranking filters and a rubric. The first scan graded nothing: the top 5 were unrelated repos, and I first blamed multi-owner `--owner` lists, but testing showed they filter correctly. The real cause was the example line inside the strategy's HTML comment, which began with `gh search issues` and ran as an unscoped query. Fixing that, then logging each query's command and count, adding an owner/repo allowlist filter, ranking `bug`-labelled issues ahead of `good first issue`, and clarifying two rubric checks (maintainer self-replies, maintainer issue-plus-PR batches) produced the first accepted candidate, **[langchain-ai/openwiki#1066](https://github.com/langchain-ai/openwiki/issues/1066).**
+I wrote a search strategy of 15 queries across agentic-AI orgs and repos, with ranking filters and a rubric. The first scan graded nothing: the top 5 were unrelated repos, and I first blamed multi-owner `--owner` lists, but testing showed they filter correctly. The real cause was the example line inside the strategy's HTML comment, which began with `gh search issues` and ran as an unscoped query. Fixing that, then logging each query's command and count, adding an owner/repo allowlist filter, ranking `bug`-labelled issues ahead of `good first issue`, and clarifying two rubric checks (maintainer self-replies, maintainer issue-plus-PR batches) produced the first accepted candidates
 
 **Unit 6: [one line on the tool work]**
 
@@ -79,24 +79,18 @@ drafted, what you did with the draft.]
 
 ## Why I Chose This Issue
 
-[1-2 paragraphs in your own words: how you searched, what your scan
-surfaced, what your scout's verdict said, why this issue fits your
-profile, and what you hope to learn. If your scout's verdict on it
-was reject and you chose it anyway, say so here and say why; choosing
-against your own tool silently is what loses points. Close with an
-honest read of the tool itself: where the scout fell short on a real
-wild search and what you changed or would change, or what convinced
-you it held up. **Record the link to your claim comment in this section too.**
-Not claimed yet? Write `claim pending` and today's date where the link goes,
-and add the link the moment your claim lands.]
+I found this issue by running my issue-scout on my own search strategy: 61 `gh search issues` queries across the agentic-AI repos on my list, plus a second priority list that I added (MONAI, nnUNet and openmed). In the scan I ran on 2026-11-15 that came to 12,318 unique issues, and 9,146 were left after my ranking filters. The scout graded 50 of them against my rubric and accepted 6. openmed #5296, "Add a synthetic free-text quasi-identifier fixture set", is one of those six and the one I wanted most. The scout's verdict was accept, and its difficulty note said straightforward: the issue names the files to touch (`tests/fixtures/risk/text_quasi_identifiers_v1.jsonl`, its README and a new unit test), gives acceptance criteria and a `pytest` command, and says the fixture and test are the whole job. I did not choose against the scout, but it only accepted this issue after I changed it. An earlier scan rejected #5296 as "not a bug fix", and I then patched the rubric so that a self-contained test or fixture gap with acceptance criteria counts, because that is the kind of isolated fix I told it I wanted. I also patched how it reads a maintainer-filed issue and how it checks that maintainers respond. The patches came from what I asked for, so a better word for the accept is "consistent with my profile", not "independently confirmed".
+
+It fits me because it is a small, self-contained Python test and fixture task in one directory, so I can finish it in about two weeks. It needs no GPU, runs on my MacBook, and is not a new feature. The repo is active: the owner committed on 2026-11-15, shipped a release on 2026-11-13, and merged 25 of 28 outside PRs in the last 90 days. I hope to learn how a privacy-focused project builds synthetic test data (PII spans, offsets, canonical labels), how a repo keeps fixtures and tests in sync, and how to take a first PR through a maintainer's rules from claim to merge. My honest read of the scout is that it found a good issue but made two mistakes I only caught by checking by hand. It accepted two sibling openmed issues (#5121 and #5097) that my direct grading later rejected, because the owner had opened 82 PRs on 2026-11-15 and 16 for roadmap issues filed the same day, including ones labelled help wanted and good first issue. That is a real risk for #5296 too, because no PR exists for it yet. The scout also let features through its label filter, and it cannot see claim comments or open PRs before grading. I would change the rubric so the owner-filed exemption stops applying when the same owner has opened PRs for several issues with the same label, and I would add `type/feature` and `maintainer only` to the label filter.
+
+Claim comment: https://github.com/maziyarpanahi/openmed/issues/5296#issuecomment-6910821189 (posted 2026-11-16)
 
 **Toolkit**
 
-- Tool: issue-scout (your scout: your search strategy, your rubric),
-  and how you used it
-- What it produced: [the scan and its verdict on this issue, described]
-- Difficulties: [where it fell short, or "none met" if none did]
-- What changed: [what you patched or would update, or "nothing"]
+- Tool: issue-scout, with my search strategy, my rubric and my scope file. I ran a full scan of 61 queries (500 results each, a quota of 100 issues per repo, priority repos first, batches of 10 graded until 5 were accepted), then graded my six accepted picks directly. In step 3 I patched the scope check: I replaced the strict `small-and-easy` row, which rejected an issue if design was debated, with `scope-feasible`, which fails only when an issue is not one piece of work. I also added the difficulty note (straightforward, moderate, ambitious) under the checks table, and logged the change in `scan-notes.md`.
+- What it produced: scan 12 graded 50 issues and accepted 6, with openmed #5296 marked accept and straightforward; the direct grading then kept it as an accept and reversed two sibling openmed issues. The full read-out is in `scan-output.md`.
+- Difficulties: the scout missed an owner opening 82 PRs for issues filed the same day. It also let feature issues through, could not see claim comments before grading, and a GitHub rate limit hit two queries at 500 results. Maintainers also appeared as CONTRIBUTOR instead of Member, so `responds-to-issues` could not rely on author association.
+- What changed: I patched the rubric three ways: `is-a-bug-fix` accepts test and fixture gaps, `unclaimed` exempts issues that invite contributors, and `responds-to-issues` counts a maintainer merging an outside PR or a commit author replying. I raised the limits, added the priority lists and the batch rule, and wrote the owner-PR finding and a proposed rubric fix into `scan-notes.md`. I would still tighten the exemption and the label filter.
 
 ---
 

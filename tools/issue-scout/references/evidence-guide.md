@@ -25,6 +25,7 @@ no maintainer replies to issues fails.
 | Recent default-branch commits | the repo's front page: the line above the file list shows the newest commit and its date; click the commit count next to it to see the recent history | "last 5 default-branch commits" under Repo facts |
 | Who is committing | the same commit list shows each commit's author. A commit authored by a bot (username ending in `[bot]`) is not maintainer life by itself, but a bot merging a human's pull request is: open the commit and see whose PR it merged | commit author names in the same list |
 | Issue response latency | open a few recently updated issues (Issues tab, sort by recently updated) and see how long the first reply from someone with an Owner, Member, or Collaborator badge took | "maintainer first-response sample" under Repo facts |
+| Newcomer PRs actually merged | the repo's Pull requests tab filtered `is:pr is:closed`: many recently merged PRs from first-time or occasional contributors means maintainers review outsiders; a pile of closed-unmerged ones means they do not (feeds `merges-newcomer-prs`) | closed PRs under Repo facts, if the snapshot carries them |
 | Maintainer activity in this thread | the badges next to commenters' names in the issue thread (Owner, Member, Collaborator) | the Comments section: each comment shows its author_association |
 
 ## Family 2: is the repo in use?

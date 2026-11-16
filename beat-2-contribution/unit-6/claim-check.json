@@ -1,0 +1,41 @@
+{
+  "item": "https://github.com/maziyarpanahi/openmed/issues/5296",
+  "checks": [
+    {
+      "name": "names-the-issue",
+      "grade": "pass",
+      "evidence": "draft names text_quasi_identifiers_v1.jsonl and tests/unit/risk/test_text_qi_fixture.py and the offset/label test, matching the issue's 'fixture and integrity test only'; the issue is a task with no error message to quote"
+    },
+    {
+      "name": "environment-detail",
+      "grade": "unclear",
+      "evidence": "not yet applicable: claim-only draft"
+    },
+    {
+      "name": "steps-rerunnable",
+      "grade": "unclear",
+      "evidence": "not yet applicable: claim-only draft"
+    },
+    {
+      "name": "Analysis-claim",
+      "grade": "unclear",
+      "evidence": "not yet applicable: claim-only draft"
+    },
+    {
+      "name": "expected-behaviour",
+      "grade": "unclear",
+      "evidence": "not yet applicable: claim-only draft"
+    },
+    {
+      "name": "actual-behaviour",
+      "grade": "unclear",
+      "evidence": "not yet applicable: claim-only draft"
+    },
+    {
+      "name": "communication",
+      "grade": "pass",
+      "evidence": "issue-specific, honest about planned work, synthetic-only rule respected; no AI-contribution ban found in CONTRIBUTING.md, docs/contributing.md or docs/generative-model-policy.md; thread has no competing claim"
+    }
+  ],
+  "verdict": "accept"
+}

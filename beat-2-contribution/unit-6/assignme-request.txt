@@ -1,0 +1,1 @@
+Hi! I'd like to work on this. I can reproduce it and plan a small, focused fix with a test. Could you assign it to me? I'll open a PR within a few days.

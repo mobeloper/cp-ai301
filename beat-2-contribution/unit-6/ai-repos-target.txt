@@ -1,0 +1,23 @@
+
+Python
+NousResearch/hermes-agent
+bytedance/deer-flow
+browser-use/browser-use
+PrefectHQ/fastmcp
+vllm-project/vllm
+sgl-project/sglang
+langchain-ai/langgraph
+google/adk-python
+microsoft/agent-framework
+langgenius/dify
+
+TypeScript / JavaScript
+openclaw/openclaw
+paperclipai/paperclip
+anomalyco/opencode
+google-gemini/gemini-cli
+ChromeDevTools/chrome-devtools-mcp
+
+Java
+spring-projects/spring-ai
+langchain4j/langchain4j
