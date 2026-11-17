@@ -59,11 +59,9 @@ one in the week it belongs to.
 
 I wrote a search strategy of 15 queries across agentic-AI orgs and repos, with ranking filters and a rubric. The first scan graded nothing: the top 5 were unrelated repos, and I first blamed multi-owner `--owner` lists, but testing showed they filter correctly. The real cause was the example line inside the strategy's HTML comment, which began with `gh search issues` and ran as an unscoped query. Fixing that, then logging each query's command and count, adding an owner/repo allowlist filter, ranking `bug`-labelled issues ahead of `good first issue`, and clarifying two rubric checks (maintainer self-replies, maintainer issue-plus-PR batches) produced the first accepted candidates
 
-**Unit 6: [one line on the tool work]**
+**Unit 6: Installed the upstream voice guard and wrote a repo-memory file for openmed**
 
-[2-4 sentences: the voice-guard, the repo-memory file. What broke or
-fell short, and what changed because of it. "Nothing broke" counts when
-it is true - say how you know.]
+I folded my three voice guides into one, added four upstream rules (claims, questions, pings, each with a wrong/right pair), and installed `check_voice.py` as a `PreToolUse` hook; a fresh session blocked `gh issue comment --help` with "no body the guard can read", and the guard log recorded it. I also wrote a 38-line `CLAUDE.local.md` for my openmed clone (CONTRIBUTING rules, the fixture and `kanon_report` subsystem, test commands, AI policy) and kept it out of the PR with `.git/info/exclude`. What fell short: my #5295 claim was posted before the guard was installed, so it never passed through it, and the hook only sees commands it can parse, so browser posts need the manual `--draft` check. Reading `AGENTS.md` for the memory file turned up a rule my tools would have broken, which forbids co-author trailers and tool names in commits and PRs, so I recorded it there and will leave the default attribution off in this repo.
 
 **Unit 7: [one line on the tool work]**
 
@@ -123,33 +121,54 @@ Claim comment: https://github.com/maziyarpanahi/openmed/issues/5295#issuecomment
 
 ## Reproduction Process
 
+Issue #5295 reports a gap, not a crash: `tests/fixtures/risk/` has QI uniqueness and negation-trap fixtures "but nothing with two releases". I reproduced the gap on current `master`.
+
 **Environment Setup**
 
-[What a stranger would need to stand this up: your operating system,
-the relevant versions (language, runtime, package manager, the project
-itself), and how you set the project up. Then the challenges you faced
-and how you solved them, or that none came up.]
+- macOS 26.5.1 (MacBook Pro), Python 3.13.9. `uv` is not installed on my machine, so I used the pip fallback from CONTRIBUTING.md.
+- Repo: my fork mobeloper/openmed at `master`, commit `e8325586e1ce2da73e9e865f34bd0345bb64301a` (2026-11-16), identical to `upstream/master`. Package version openmed 3.3.0 (`openmed/__about__.py`). The issue's "Release: v4.3" footer is a roadmap milestone, not a version where the behavior was seen. The bug template's Model ID, PyTorch and Transformers fields do not apply to an offline fixture.
+- Setup: `python3 -m venv .venv`, `.venv/bin/python -m pip install --upgrade pip`, `.venv/bin/python -m pip install -e ".[dev]"`. It installed with no errors, and `import openmed` reports 3.3.0.
+- Challenges: none. The one difference from the documented flow is that `uv sync --frozen --extra dev` was unavailable, so I used the supported pip fallback.
 
 **Steps to Reproduce**
 
-1. [Step 1]
-2. [Step 2]
-3. [Observed result]
+From the repo root, on the commit above:
+
+1. Check that the files the issue asks for are absent: `ls tests/fixtures/risk/successive_releases_v1.jsonl tests/unit/risk/test_successive_release_fixture.py`
+2. Run the issue's validation command: `.venv/bin/python -m pytest tests/unit/risk/test_successive_release_fixture.py -q`
+3. Search for any existing successive-release fixture: `grep -rIl "successive_release" . --exclude-dir=.venv --exclude-dir=.git` and `grep -n -i "successive\|intersect" tests/fixtures/risk/README.md`
+4. Confirm the building blocks already work: run `kanon_report` on the closest existing fixture, and run `.venv/bin/python -m pytest tests/unit/risk/test_regression_suites.py tests/unit/risk/test_kanon.py -q`
+5. Observed result: the fixture and test files are missing, so the issue's pytest command cannot run, while the existing k-anonymity code and suites work.
 
 **Reproduction Evidence**
 
-- **Commit showing reproduction:** [link to commit in your fork]
-- **Screenshots/logs:** [if applicable]
-- **My findings:** [what you discovered during reproduction; an
-  honest, evidenced cannot-reproduce that led you to re-pick or ask
-  the maintainer belongs here and costs you nothing]
+- **Commit showing reproduction:** none. A gap needs no code change to show it, and I have not pushed anything to my fork.
+- **Screenshots/logs:**
+
+  ```text
+  $ ls tests/fixtures/risk/successive_releases_v1.jsonl tests/unit/risk/test_successive_release_fixture.py
+  ls: tests/fixtures/risk/successive_releases_v1.jsonl: No such file or directory
+  ls: tests/unit/risk/test_successive_release_fixture.py: No such file or directory
+
+  $ .venv/bin/python -m pytest tests/unit/risk/test_successive_release_fixture.py -q
+  ERROR: file or directory not found: tests/unit/risk/test_successive_release_fixture.py
+  no tests ran in 0.48s
+
+  $ .venv/bin/python -m pytest tests/unit/risk/test_regression_suites.py tests/unit/risk/test_kanon.py -q
+  35 passed, 9 subtests passed in 11.96s
+
+  kanon_report on quasi_identifier_uniqueness.jsonl (4 records; QIs age, city, visit_date):
+  suite quasi_identifier_uniqueness records 4 k 2 class_count 2
+  ```
+
+- **My findings:** the issue's description matches the repo today. `tests/fixtures/risk/` holds only `dp_budget_scenarios.json`, `negation_traps.jsonl`, `quasi_identifier_uniqueness.jsonl` and `README.md`, none of them has a release field, no tracked file in the repo matches `successive_release`, and the README mentions only "release-gate fixtures", with no successive releases or intersection result. `kanon_report` measures one release at a time, so I do not expect to touch `openmed/risk/`: the missing pieces are the fixture, its README contract and the per-release test. I have not yet checked how `openmed/risk/population.py` words "keyed privacy-unit", so the privacy-unit column name is still open.
 
 **Toolkit**
 
-- Tool:
-- What it produced:
-- Difficulties:
-- What changed:
+- Tool: repro-check, in live mode with my wild-scope file, rubric and voice guide. I ran it on my claim draft first (claim-only), then on the claim and `repro-draft.md` together as a full package.
+- What it produced: the first run refused to grade, because the scope says it only grades issues my scout has graded and #5295 had never been graded. After I ran the scout on it, the claim-only run returned accept, and the full package returned accept with all 7 checks passing, with two suggested edits that I applied here: say why "v4.3" is not the affected version, and drop a mention of a local file a reader cannot see.
+- Difficulties: the rubric's checks assume a bug. "Quotes the error message from the issue body" and "actual behaviour" fit a fixture gap awkwardly, so I had to read them as "quotes the gap" and "shows the files are missing". Its environment check also could not tell a roadmap release tag from an affected version.
+- What changed: I ran the scout on #5295 before grading, as the scope requires, and added the environment note above. I would add a line to the rubric for gap and test-fixture issues saying what counts as expected and actual behaviour for them.
 
 ---
 
