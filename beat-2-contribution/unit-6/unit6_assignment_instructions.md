@@ -35,7 +35,7 @@ cp skill/plan-check-scope-wild.md ~/.claude/skills/plan-check/scope.md
 Revise until it passes.
 
 
-8. Post your claim through Claude Code, so the voice guard checks it first (a few cents of course credit):
+8. DONE! Post your claim through Claude Code, so the voice guard checks it first (a few cents of course credit):
 
 >>claude "run this command: gh issue comment https://github.com/maziyarpanahi/openmed/issues/5295 --body-file claim-draft.md"
 
@@ -60,10 +60,11 @@ Commit your changes on GitHub, the way you have since unit 1.
 
 >>claude "repro-check: grade my claim comment in claim-draft.md and my repro report in repro-draft.md for issue https://github.com/maziyarpanahi/openmed/issues/5295"
 
-When it passes, move your report into the three parts of your story's Reproduction Process section: Environment Setup, Steps to Reproduce, and Reproduction Evidence. For the evidence, an output excerpt, a log, or a commit link from your fork all work (no commit? Write none on the commit line). Then fill in that section's Toolkit block, about repro-check. Don't post the report on the issue. Your PR description carries the proof when you open it.
+When it passes, move my report into the three parts of my story's Reproduction Process section: Environment Setup, Steps to Reproduce, and Reproduction Evidence. For the evidence, an output excerpt, a log, or a commit link from my fork all work (no commit? Write none on the commit line). Then fill in that section's Toolkit block, about repro-check. Don't post the report on the issue. The PR description carries the proof when I open it.
+
 
 📦 What you submit
-Nothing this week. You submit Assignment 5 once, your course repo link, from the unit 5 Assignment tab. Graders read only beat-2-contribution/contribution-story.md, your issue's thread, and your pull request. Your voice guard, voice guide, and memory file stay on your computer, and your tools are graded once, in the unit 9 portfolio.
+Graders read only beat-2-contribution/contribution-story.md, your issue's thread, and your pull request. Your voice guard, voice guide, and memory file stay on your computer, and your tools are graded once, in the unit 9 portfolio.
 
 🎯 Where this week's work counts
 The full rubric is on the Grading Rubrics page under Course Info. This week's work feeds four parts of it: choosing your issue (50 points, step 9), reproducing it (part of the 50 for reproduction, planning, and testing, step 12), the link to your claim comment (part of the 60 for your pull request), and the Toolkit thread (40 points, steps 9 and 11). Nobody grades whether you picked the right issue.
