@@ -1,10 +1,10 @@
 {
-  "item": "https://github.com/maziyarpanahi/openmed/issues/5296",
+  "item": "https://github.com/maziyarpanahi/openmed/issues/5295",
   "checks": [
     {
       "name": "names-the-issue",
       "grade": "pass",
-      "evidence": "draft names text_quasi_identifiers_v1.jsonl and tests/unit/risk/test_text_qi_fixture.py and the offset/label test, matching the issue's 'fixture and integrity test only'; the issue is a task with no error message to quote"
+      "evidence": "names successive_releases_v1.jsonl, two 20-40 row releases, keyed privacy-unit column, per-release kanon_report test, README intersection note, composition scoring out of scope"
     },
     {
       "name": "environment-detail",
@@ -34,7 +34,7 @@
     {
       "name": "communication",
       "grade": "pass",
-      "evidence": "issue-specific, honest about planned work, synthetic-only rule respected; no AI-contribution ban found in CONTRIBUTING.md, docs/contributing.md or docs/generative-model-policy.md; thread has no competing claim"
+      "evidence": "issue-specific, no praise or urgency, states synthetic-only rule from CONTRIBUTING.md, claims no finished work"
     }
   ],
   "verdict": "accept"

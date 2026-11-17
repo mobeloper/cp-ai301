@@ -131,3 +131,9 @@
 ## 2026-11-15 direct grading of 6 picks: 4 accepted, 2 reversed
 - Correction to scan 12: openmed #5121 and #5097 are rejected on `unclaimed`. The owner opened 82 PRs on 2026-11-15/16, each closing a roadmap issue filed on 2026-11-07, including 19 help-wanted and 2 good-first-issue ones. Scan 12 only searched PRs by text and missed this.
 - Friction: the maintainer-opened exemption for 'good first issue'/'help wanted' labels is too generous for openmed, where the owner PRs even labelled issues (#5422, #5448). Proposed rubric patch: drop the exemption when the same maintainer has opened PRs for 2 or more issues carrying the same invite label in the last 7 days. #5296 would then fail.
+
+## 2026-11-16 direct grading of openmed #5295: accepted (straightforward)
+- Accepted by the rubric as written. Full read-out is at the end of scan-output.md. Only has-repro failed (preferred, and a fixture task has no repro).
+- Friction: `unclaimed` passes #5295 only through the maintainer-opened exemption, the same one the 2026-11-15 note proposes dropping. The rubric cannot see that the owner offered to assign it on #5682's thread, so the offer is the deciding fact, not a rubric signal. Keep the proposed patch, but let a maintainer's explicit offer to assign override it.
+- Friction: scout ran from `gh api` calls by hand. Outsider PRs on sibling issues (#5682 by Mr-Neutr0n for #5296) never show up in the issue's timeline; only the owner's cross-reference does. Search PRs by text and by sibling number.
+- Housekeeping: `~/.claude/skills/issue-scout/scan-output.md` does not exist, so the read-out went to this folder's `scan-output.md`, as in earlier entries.

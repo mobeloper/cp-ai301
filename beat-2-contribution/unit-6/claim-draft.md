@@ -1,5 +1,5 @@
-I'd like to take this one. Could you assign it to me?
+I'd like to take this one. Could you assign it to me? (You offered this issue on #5296's thread; I'm leaving that scope to the open PR there.)
 
-First step: read `tests/fixtures/risk/README.md` and the `meta` and `case` row layout in `negation_traps.jsonl`, then write `text_quasi_identifiers_v1.jsonl` and `tests/unit/risk/test_text_qi_fixture.py` in that format. The test will slice each note at its span offsets and check labels with `is_recognized_label`.
+First step: read `tests/fixtures/risk/README.md`, `quasi_identifier_uniqueness.jsonl` and `kanon_report` in `openmed/risk/kanon.py`, then write `successive_releases_v1.jsonl` (a `meta` row and two releases of 20-40 rows each, with a keyed privacy-unit column) and `tests/unit/risk/test_successive_release_fixture.py`. The test will run `kanon_report` on each release alone and assert the committed k values. I'll document the format and the expected intersection result in the README, and leave composition scoring out.
 
-All note text will be synthetic and marked `synthetic: true`. I'll comment here once `pytest tests/unit/risk/test_text_qi_fixture.py -q` passes locally, or earlier if the span format needs a decision from you.
+All rows will be synthetic and marked as such, with no real names, dates or places. I'll comment here once `.venv/bin/python -m pytest tests/unit/risk/test_successive_release_fixture.py -q` passes locally, or earlier if the fixture format needs a decision from you.

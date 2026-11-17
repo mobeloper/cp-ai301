@@ -24,25 +24,25 @@ cp skill/plan-check-scope-wild.md ~/.claude/skills/plan-check/scope.md
 
 5. DONE! Choose one: pick the issue that fits your profile and that you'd be happy to work on for the next two weeks. Your scout's verdict is evidence, so you can choose an issue it rejected if your story says why. Then read every comment on the issue's GitHub thread. If someone has already asked to work on it, it's taken even if nobody is assigned, so choose another. If the difficulty note says ambitious, it names an open question, so ask about it first in your claim. Then, on the Issue Selection site, click Unclaim on any picks you're not using, so classmates can choose them.
 
->> Selected issue: https://github.com/maziyarpanahi/openmed/issues/5296
+>> Selected issue: https://github.com/maziyarpanahi/openmed/issues/5295
 
 6. DONE! For te chosen repo issue: "openmed#5296", read the repo's rules: find its CONTRIBUTING.md (in the repo's main folder, .github/, or docs/) and read it end to end. Note what a PR needs before maintainers will accept it, the scope rules, the test commands, and what it says about AI. If the repo doesn't accept AI-assisted contributions, you can't contribute there honestly, so go back to step 5 and choose again. 
 
 
 7. DONE! Draft your claim: in your Unit 6 materials folder, write your claim comment in a new file, claim-draft.md. Say you'd like to work on the issue, name your first step, and say when you'll report back. Then check it:
 
->> claude "/repro-check grade my draft claim comment in claim-draft.md for issue https://github.com/maziyarpanahi/openmed/issues/5296"
+>> claude "/repro-check grade my draft claim comment in claim-draft.md for issue https://github.com/maziyarpanahi/openmed/issues/5295"
 Revise until it passes.
 
 
 8. Post your claim through Claude Code, so the voice guard checks it first (a few cents of course credit):
 
->>claude "run this command: gh issue comment https://github.com/maziyarpanahi/openmed/issues/5296 --body-file claim-draft.md"
+>>claude "run this command: gh issue comment https://github.com/maziyarpanahi/openmed/issues/5295 --body-file claim-draft.md"
 
 If the guard stops it, it quotes the rule your draft broke. Fix the draft and run the command again. If you post on GitHub's website instead, run python3 ~/.claude/voice-guard/check_voice.py --draft claim-draft.md first, because the guard can't see your browser. Did someone claim it before you? Go back to step 5.
 
 Issue claim comment: 
-https://github.com/maziyarpanahi/openmed/issues/5296#issuecomment-6910821189 
+https://github.com/maziyarpanahi/openmed/issues/5295#issuecomment-6933573207 
 
 
 9. DONE! Write Why I Chose This Issue: in your course repo, open beat-2-contribution/contribution-story.md. Fill in the top of the file: the issue's title, your name, your GitHub username, and the issue's link. Then fill in the Why I Chose This Issue section in your own words: where the issue came from, what your scout's verdict and difficulty note said, why it fits you, what you hope to learn, an honest read of how your scout did, and the link to your claim comment (on GitHub, click ... on your comment, then Copy link). Then fill in the Toolkit block already at the end of that section, about your scout, including the scope patch from step 3. Not ready to claim yet? Write claim pending and the date where the link goes, and add the link once you post. 

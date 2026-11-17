@@ -8437,3 +8437,41 @@ Rejected:
  }
 ]
 ```
+
+
+---
+
+# 2026-11-16 direct grading of openmed #5295 (patched rubric)
+
+## Result
+Accept. **maziyarpanahi/openmed #5295**: add a synthetic successive-release fixture for composition tests. Difficulty: **straightforward**.
+
+- The issue names every file: `successive_releases_v1.jsonl` (new), the `tests/fixtures/risk/README.md` paragraph, `openmed/risk/kanon.py` for reference, and `tests/unit/risk/test_successive_release_fixture.py` (new). It lists acceptance criteria and the pytest command. Composition scoring is explicitly out of scope.
+- Open, no assignee, 0 comments, no linked or mentioned PR. The only cross-reference is the sibling #5296. On 2026-11-16 the owner replied on #5682 (a PR by outside contributor Mr-Neutr0n for #5296) offering to assign #5295 to the claimant.
+- Preferred: good-to-start passes (`good first issue`, `help wanted`). has-repro fails: it is a fixture task, not a bug, so there is no repro or stack trace. shipped-recently passes (v3.3.0, 2026-11-13). has-contributing-guide passes. merges-newcomer-prs passes (13 outsider PRs merged in 90 days).
+- Caveat: the owner opened the issue on 2026-11-07 and PRs his own sibling issues fast. `unclaimed` passes only through the invite-label exemption ('good first issue', 'help wanted', and a 'For first-time contributors' section). Sibling #5296 drew an outside PR within 9 days, so claim and get assigned promptly. Under the patch proposed in scan-notes (drop the exemption after 2 or more same-label PRs in 7 days) this issue would fail; the owner's explicit offer to assign it is the reason to take it anyway.
+
+```json
+[
+ {
+  "item": "https://github.com/maziyarpanahi/openmed/issues/5295",
+  "checks": [
+   {"name": "maintainer-alive", "grade": "pass", "evidence": "5 of 5 latest commits on 2026-11-16 (maziyarpanahi); repo not archived"},
+   {"name": "responds-to-issues", "grade": "pass", "evidence": "owner replied 2026-11-16 on outsider-opened #5585 and #5560 and on outsider PR #5682"},
+   {"name": "unclaimed", "grade": "pass", "evidence": "open, no assignee, 0 comments, no linked PR; owner-opened but invites outsiders (good first issue, help wanted, first-time contributors section)"},
+   {"name": "is-a-bug-fix", "grade": "pass", "evidence": "one test fixture plus per-release test with stated acceptance criteria (test gap, roadmap item for contributors)"},
+   {"name": "scope-feasible", "grade": "pass", "evidence": "one fixture file, README paragraph and a test of about 40 lines"},
+   {"name": "no-special-hardware", "grade": "pass", "evidence": "offline pytest, no accelerator or cloud named"},
+   {"name": "not-docs-only", "grade": "pass", "evidence": "needs a new fixture and a new unit test"},
+   {"name": "macos-compatible", "grade": "pass", "evidence": "no platform named; .venv pytest"},
+   {"name": "ai-contribution-allowed", "grade": "pass", "evidence": "CONTRIBUTING.md has no AI ban; AGENTS.md exists"},
+   {"name": "good-to-start", "grade": "pass", "evidence": "labels: good first issue, help wanted"},
+   {"name": "has-repro", "grade": "fail", "evidence": "fixture task; no repro steps or stack trace in the body"},
+   {"name": "shipped-recently", "grade": "pass", "evidence": "v3.3.0 published 2026-11-13"},
+   {"name": "has-contributing-guide", "grade": "pass", "evidence": "CONTRIBUTING.md present"},
+   {"name": "merges-newcomer-prs", "grade": "pass", "evidence": "13 outsider PRs merged in the last 90 days"}
+  ],
+  "verdict": "accept"
+ }
+]
+```
