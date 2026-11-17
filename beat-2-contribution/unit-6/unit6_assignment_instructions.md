@@ -51,13 +51,15 @@ Commit your changes on GitHub, the way you have since unit 1.
 
 
 
-10. Write your repo's memory file: if the repo isn't on your computer yet, fork it on GitHub and clone your fork. From your Unit 6 materials folder, run cp skill/claude-local-template.md <path to your clone>/CLAUDE.local.md, then open that file and follow the instructions inside it. Claude Code reads this file at the start of every session in that repo, so Claude doesn't have to relearn the repo each time. The template also shows you how to keep the file out of your PR.
+10. DONE! Write your repo's memory file: if the repo isn't on your computer yet, fork it on GitHub and clone your fork. From your Unit 6 materials folder, run cp skill/claude-local-template.md <path to your clone>/CLAUDE.local.md, then open that file and follow the instructions inside it. Claude Code reads this file at the start of every session in that repo, so Claude doesn't have to relearn the repo each time. The template also shows you how to keep the file out of your PR.
 
-Write your Unit 6 Toolkit entry: this is the Toolkit section near the top of your contribution story, not the block from step 9. Skip the example block there, and find the Unit 6 entry. Keep "Unit 6:" at the start of its heading, and replace the brackets after it with one line on your tool work. Then replace the bracketed paragraph under it with two to four sentences about the voice guard and your memory file: what you built, what broke or fell short, and what you changed because of it. Commit it on GitHub.
 
-Start reproducing the issue: show that what the issue describes is real today, with evidence someone else could check. Write it up in a new file, repro-draft.md, in your Unit 6 materials folder next to claim-draft.md. Then grade the two together, the way you did in unit 2:
+11. DONE! Write your Unit 6 Toolkit entry: this is the Toolkit section near the top of your contribution-story.md. Skip the example block there, and find the Unit 6 entry. Keep "Unit 6:" at the start of its heading, and replace the brackets after it with one line on your tool work. Then replace the bracketed paragraph under it with two to four sentences about the voice guard and your memory file: what you built, what broke or fell short, and what you changed because of it.
 
-claude "repro-check: grade my claim comment in claim-draft.md and my repro report in repro-draft.md for issue <issue URL>"
+12. DONE! Start reproducing the issue: show that what the issue describes is real today, with evidence someone else could check. Write it up in a new file, repro-draft.md, in your Unit 6 materials folder next to claim-draft.md. Then grade the two together, the way you did in unit 2:
+
+>>claude "repro-check: grade my claim comment in claim-draft.md and my repro report in repro-draft.md for issue https://github.com/maziyarpanahi/openmed/issues/5295"
+
 When it passes, move your report into the three parts of your story's Reproduction Process section: Environment Setup, Steps to Reproduce, and Reproduction Evidence. For the evidence, an output excerpt, a log, or a commit link from your fork all work (no commit? Write none on the commit line). Then fill in that section's Toolkit block, about repro-check. Don't post the report on the issue. Your PR description carries the proof when you open it.
 
 📦 What you submit
