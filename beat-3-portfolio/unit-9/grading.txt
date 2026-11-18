@@ -1,0 +1,52 @@
+Assignment 6: Portfolio (unit 9)
+Total Points: 125pts
+
+Required Features
+The first five rows read beat-3-portfolio/linkedin-post.md. The other eight read beat-3-portfolio/technical-writeup.md.
+
+The post has the shape of a LinkedIn post — 10pts
+
+The post is the right length — 5pts
+
+The post is clear to a business audience — 15pts
+
+The post matches the write-up — 10pts
+
+The post is professionally written — 10pts
+
+The write-up has its three sections — 5pts
+
+The Overview tells the whole story — 10pts
+
+What happened is told in order, with real moments — 10pts
+
+The write-up shows real proof on the page — 10pts
+
+The proof comes from real term work — 10pts
+
+The write-up shows a change the student made — 10pts
+
+The write-up names a result that landed — 10pts
+
+Limitations and what's next are real and concrete — 10pts
+
+
+====
+
+How it's graded
+The full rubric is on the Grading Rubrics page under Course Info. The 125 points:
+
+The LinkedIn post (50)
+
+Shape (10): plain text, an opening two sentences that say what you did, and a link to the work.
+Length (5): 60 to 250 words.
+Clear to a business audience (15): a reader who doesn't code can tell what you worked on, how it ended, and why it matters.
+Matches your write-up (10): the same work and the same outcome, with nothing the write-up doesn't back up.
+Professionally written (10): first person, complete sentences, and fair to the people you worked with.
+The technical write-up (75)
+
+Sections (5): Overview, What happened, and Limitations and what's next, all filled in.
+Overview (10): what the work was, your part in it, and how it ended.
+What happened (50): 10 points each for real moments told in order, at least two pieces of proof on the page, proof from your real work, a change you made, and a result that landed.
+Limitations and what's next (10): a real limit of your work, and a next step that follows from it.
+Most of your score depends on how you write about your work, not on how the work turned out. Every ending is worth writing up honestly, whether your PR merged, is still open, was closed, or was never opened. Strong work with claims and no proof can score lower than modest work presented well.
