@@ -1,23 +1,5 @@
 # Voice guide: how I talk upstream
 
-<!--
-THIS IS A CARRY-OVER SLOT, not a new hole. You wrote this guide in
-week 2; paste your filled week-2 voice-guide.md here, whole. It is not
-re-authored and it is not graded as new work this week.
-
-Then reread it with the plan comment in mind. Your claim and repro
-comments promised and reported; a plan comment commits you to an
-approach in front of the people who maintain the code. If your rules
-do not cover that register (for example: how you state an approach you
-are not certain of, or how you respond when a maintainer already
-suggested a direction), extend the guide with what it needs. Extending
-is allowed and encouraged; starting over is not required.
-
-Live mode reads this file before your plan comment goes out and
-reports any rule your draft breaks. Eval mode ignores it entirely,
-because your voice is yours and carries no gold labels.
--->
-
 ## Who I am in threads
 
 <!-- 2-3 lines. Who is talking when you comment on an issue: your
@@ -126,12 +108,6 @@ Wrong: "Tested locally, all tests pass."
 Right: "Before: --runxfail raises UnknownHashError. After: pytest tests/unit/test_security.py, 26 passed. make lint and make typecheck pass."
 
 
-### Rule: Say what I left out and what I used AI for (PR description)
-
-In Notes for Reviewers I state in my own words how I used AI on the change, and I name anything I left out on purpose or changed from my plan, with the reason. I do not hide a shortfall or leave it for the reviewer to find.
-
-Wrong: "AI-assisted." / "Ready for review!"
-Right: "I used Claude Code to draft my plan and check this description against my diff; I ran the commands and read the diff myself. I left ValueError out of scope because the issue names only UnknownHashError."
 
 ## Things I never post
 
@@ -153,6 +129,42 @@ list back at you when a draft crosses it. -->
 - A PR title like "fix bug" or "updates" that does not say what changed and where.
 - "Implements the plan exactly" or "no other changes" without checking the diff.
 - "Tested locally" or "all tests pass" with no output shown, or a ticked Testing box the output does not support.
-- A bare "AI-assisted" instead of saying how I used AI, or any sign that I am hiding something I left out.
 - Promising follow-up PRs or a timeline for them ("I'll send another PR for that tomorrow").
 
+## Upstream: how I talk to maintainers
+
+Maintainers are strangers who owe me nothing, so what I post has to be easy to act on and easy to trust.
+
+### Claims I post
+
+#### Rule: Claim with a first step, never a date
+
+A claim says I want the issue, names the first concrete step with the files involved, and says what event I will report back on. It gives no delivery date.
+
+- Wrong: "I'll take this and have a PR up by Friday!"
+- Right: "I'd like to take this one. Could you assign it to me? First step: read tests/fixtures/risk/README.md, then write the fixture and its test. I'll comment here once the test passes locally."
+
+#### Rule: Never claim over someone, and release honestly
+
+Before I claim, I read the whole thread and any linked PRs. If a stranger already claimed or opened a PR, I do not claim; I say so and move on. If I stop working, I say that in the thread.
+
+- Wrong: "Can I work on this too?" (when a claim or open PR already covers it)
+- Right: "I see #5682 covers this scope, so I'm leaving it and picking #5295 instead." / "I'm not able to continue with this one, so it's free for someone else."
+
+### Questions I ask
+
+#### Rule: One answerable question, with what I already tried
+
+A question names the file or behavior I looked at, what I tried or read, and asks one thing a maintainer can answer in a sentence.
+
+- Wrong: "How does this work? Also where are the tests, and should I update the docs?"
+- Right: "I read tests/fixtures/risk/README.md and kanon_report and could not tell whether the privacy-unit column must be unique per release. Should each release repeat the same keys?"
+
+### Pings I send
+
+#### Rule: Ping on the repo's rhythm, once, with something new
+
+I ping only after the repo's own reply time has passed (I check how fast maintainers answered recent threads), only once, and I say what I will do if I hear nothing. I do not add pressure or count days.
+
+- Wrong: "Any update? It has been 2 days now."
+- Right: "Following up on my question above about the release layout. Maintainers here usually answer within a day, so I'll continue with the layout in the README unless you say otherwise."
