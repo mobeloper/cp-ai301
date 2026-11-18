@@ -12,7 +12,7 @@ files and no evidence uploads are part of Assignment 5.
 **Student:** Eric Michel
 **GitHub Username:** mobeloper
 **Issue:** https://github.com/maziyarpanahi/openmed/issues/5295
-**Pull Request:** [GitHub PR link, once opened]
+**Pull Request:** https://github.com/maziyarpanahi/openmed/pull/5698
 
 One repository, built across units 5 to 8, telling the whole story of your real
 contribution. Fill it as you work, not at the end — the sections below ask for evidence that
@@ -63,10 +63,9 @@ I wrote a search strategy of 15 queries across agentic-AI orgs and repos, with r
 
 I folded my three voice guides into one, added four upstream rules (claims, questions, pings, each with a wrong/right pair), and installed `check_voice.py` as a `PreToolUse` hook; a fresh session blocked `gh issue comment --help` with "no body the guard can read", and the guard log recorded it. I also wrote a 38-line `CLAUDE.local.md` for my openmed clone (CONTRIBUTING rules, the fixture and `kanon_report` subsystem, test commands, AI policy) and kept it out of the PR with `.git/info/exclude`. What fell short: my #5295 claim was posted before the guard was installed, so it never passed through it, and the hook only sees commands it can parse, so browser posts need the manual `--draft` check. Reading `AGENTS.md` for the memory file turned up a rule my tools would have broken, which forbids co-author trailers and tool names in commits and PRs, so I recorded it there and will leave the default attribution off in this repo.
 
-**Unit 7: [one line on the tool work]**
+**Unit 7: Ran the ship-gate on my real branch, patched two checks to follow the repo's AI rule, and opened PR #5698**
 
-[2-4 sentences: the ship-gate and your gate manifest. What it produced
-on your real branch, what fought you, what changed because of it.]
+My gate manifest runs `ruff check`, `ruff format --check` and `pytest tests/unit/risk -q`, and the ship-gate then runs my pr-precheck on the branch, `plan.md`, `test_evidence.md` and `pr_draft.md`. It stopped three times before it passed on commit `8be36858a`: the full suite and type-check were not shown, `ai-disclosure` failed because the course asks for an AI statement that openmed's `AGENTS.md` forbids in PR text, and two ticked boxes contradicted my notes. I changed only the `ai-disclosure` check in my rubric and procedure, installed `uv` to run the repo's `make` targets in the locked environment, and later removed the matching AI rule from my voice guide, which blocked `gh pr create`. The gate then passed on all 8 checks and the PR opened as https://github.com/maziyarpanahi/openmed/pull/5698.
 
 **Unit 8: [one line on the tool work]**
 
@@ -96,26 +95,26 @@ Claim comment: https://github.com/maziyarpanahi/openmed/issues/5295#issuecomment
 
 **Problem Description**
 
-[In your own words, what is broken or missing?]
+openmed can measure k-anonymity for one release of a table, but it has no small, known example of the same synthetic population released twice with different generalizations. Without one, the later work on composition across releases (intersecting two releases to isolate rows) has nothing to test against. Nothing is broken; a test fixture is missing.
 
 **Expected Behavior**
 
-[What should happen?]
+`tests/fixtures/risk/` holds `successive_releases_v1.jsonl`: a `meta` row plus two releases of 20-40 synthetic rows each, sharing a keyed privacy-unit column. Running `kanon_report` on each release alone gives the k recorded in the fixture, the README documents the format and the expected intersection result, and the issue's pytest command passes.
 
 **Current Behavior**
 
-[What actually happens?]
+The fixture, its README paragraph and `tests/unit/risk/test_successive_release_fixture.py` do not exist, so the issue's pytest command stops with "file or directory not found". The existing suites (`test_regression_suites.py`, `test_kanon.py`) pass, 35 tests.
 
 **Affected Components**
 
-[Which parts of the codebase are involved?]
+New: `tests/fixtures/risk/successive_releases_v1.jsonl` and `tests/unit/risk/test_successive_release_fixture.py`. Edited: `tests/fixtures/risk/README.md`. Read only: `openmed/risk/kanon.py` (`kanon_report`) and `openmed/risk/population.py` (privacy-unit wording). Composition scoring is out of scope.
 
 **Toolkit**
 
-- Tool:
-- What it produced:
-- Difficulties:
-- What changed:
+- Tool: Claude Code with `gh` and file reads. I had it re-read issue #5295 (body, comments, linked PRs) and the risk code (`kanon.py`, `population.py`, `test_regression_suites.py`, the fixture README) so the four answers rest on the repo as it is today, then I checked them against my repro evidence.
+- What it produced: the four answers above, plus a check that no PR or assignee exists for #5295 and a reading of how `population.py` names its privacy-unit column.
+- Difficulties: the issue template is bug-shaped, so "Current Behavior" had to be read as "the files are missing", the same stretch I met in repro-check. The tool also reads fast, so I re-checked each file name against the issue text rather than trusting the summary.
+- What changed: I replaced the open "privacy-unit column name" note in my Reproduction findings with what `population.py` actually does.
 
 ---
 
@@ -161,7 +160,7 @@ From the repo root, on the commit above:
   suite quasi_identifier_uniqueness records 4 k 2 class_count 2
   ```
 
-- **My findings:** the issue's description matches the repo today. `tests/fixtures/risk/` holds only `dp_budget_scenarios.json`, `negation_traps.jsonl`, `quasi_identifier_uniqueness.jsonl` and `README.md`, none of them has a release field, no tracked file in the repo matches `successive_release`, and the README mentions only "release-gate fixtures", with no successive releases or intersection result. `kanon_report` measures one release at a time, so I do not expect to touch `openmed/risk/`: the missing pieces are the fixture, its README contract and the per-release test. I have not yet checked how `openmed/risk/population.py` words "keyed privacy-unit", so the privacy-unit column name is still open.
+- **My findings:** the issue's description matches the repo today. `tests/fixtures/risk/` holds only `dp_budget_scenarios.json`, `negation_traps.jsonl`, `quasi_identifier_uniqueness.jsonl` and `README.md`, none of them has a release field, no tracked file in the repo matches `successive_release`, and the README mentions only "release-gate fixtures", with no successive releases or intersection result. `kanon_report` measures one release at a time, so I do not expect to touch `openmed/risk/`: the missing pieces are the fixture, its README contract and the per-release test. I also checked how `openmed/risk/population.py` words "keyed privacy-unit": it takes a column name through `sample_privacy_unit` / `population_privacy_unit`, its tests use ID columns such as `sample_id`, and it rejects a privacy-unit column that is also a quasi-identifier. So my fixture's key column is an opaque ID column that stays out of every quasi-identifier list. No PR or assignee exists for #5295 as of 2026-11-17.
 
 **Toolkit**
 
@@ -176,93 +175,112 @@ From the repo root, on the commit above:
 
 **Analysis**
 
-[Your analysis of the root cause: what is causing the issue, traced
-to the files and functions involved.]
+The cause is a coverage gap, not a defect in code. `kanon_report` in `openmed/risk/kanon.py` takes one table, builds equivalence classes from the quasi-identifiers (`_equivalence_key`) and returns `k` (smallest class size) and `class_count`. It has no notion of a release, so it measures one release at a time, and my repro showed it works (35 tests pass). What is missing sits in test data: `tests/fixtures/risk/` has `quasi_identifier_uniqueness.jsonl` (one table, 4 records) and `negation_traps.jsonl`, and neither has a release field or a privacy-unit key. `tests/unit/risk/test_regression_suites.py` only loads those two files, and `tests/fixtures/risk/README.md` documents only their formats. So later composition work has no committed example where two releases are each safe alone but isolate rows when intersected.
 
 **Proposed Solution**
 
-[High-level description of your fix approach, and what you are
-deliberately NOT changing.]
+Add exactly what issue #5295 asks for and change no library code.
+
+- `tests/fixtures/risk/successive_releases_v1.jsonl`: a `meta` row (same shape as the existing fixtures, with the committed per-release k in `expected`) and two releases of one synthetic population, 20-40 rows each, plus a keyed privacy-unit column (`privacy_unit_id`) shared by both releases. The two releases generalize the quasi-identifiers differently. Every row is marked `synthetic: true` and holds invented values only: no real names, dates or places.
+- `tests/unit/risk/test_successive_release_fixture.py` (about 40 lines): loads the fixture, checks every row is marked synthetic, runs `kanon_report` on each release alone with explicit `quasi_identifiers` (so the ID column stays out), and asserts the committed k for each.
+- `tests/fixtures/risk/README.md`: a paragraph describing the format and the expected intersection result for later composition tests.
+
+I am not changing `openmed/risk/` (composition scoring is out of scope per the issue), the existing fixtures, or the existing tests, and I am not adding anything the issue does not list: no extra test helpers, no CHANGELOG entry, no docs beyond the README paragraph.
 
 **Implementation Plan**
 
-1. [Modify file X to do Y]
-2. [Add or change Z]
-3. [Update tests]
+1. Branch from the latest `master`: `test/issue-5295-successive-release-fixture`.
+2. Design the population on paper: about 24 units, each with a `privacy_unit_id`. Release 1 and release 2 generalize the quasi-identifiers differently, so each release alone has k of at least 2 and the intersection leaves at least one unit alone in its class. Confirm the k values and the intersection with `kanon_report` and a throwaway script I do not commit.
+3. Write the fixture with the per-release k in `meta.expected`.
+4. Write the test file.
+5. Add the README paragraph, including the expected intersection result.
+6. Run `.venv/bin/python -m pytest tests/unit/risk/test_successive_release_fixture.py -q`, then my manifest checks (`ruff check`, `ruff format --check`, `pytest tests/unit/risk -q`) and `python scripts/release/check_repo_policy.py --commits origin/master HEAD`.
+7. Commit with imperative `test:` and `docs:` messages, then open one PR with `Closes #5295`, following `.github/PULL_REQUEST_TEMPLATE.md` and listing the exact validation commands.
 
-[Record deviations here as they happen: what changed mid-build and
-why. A recorded deviation is honest work; silent drift is not.]
+**Deviations from the plan (2026-11-17):** the scope did not change, and I made no change to the files or the approach. Three small differences, each recorded here so the diff holds no surprise:
+
+- The test file is 54 lines, not "about 40". I wrote the file loader and the per-release k check as two readable test functions, one of them parametrized over both releases, so the file runs 3 test cases.
+- The `meta` row carries two fields the plan did not list, `quasi_identifiers` and `privacy_unit_column`, so the test reads the column names from the fixture and does not hard-code them. It still has the `expected` block the plan called for.
+- The README paragraph is 24 lines. It repeats the row format in the same bullet style as the existing suites and gives the expected intersection result with the three isolated unit IDs, which the plan said it would document.
 
 **Toolkit**
 
-- Tool:
-- What it produced:
-- Difficulties:
-- What changed:
+- Tool: my plan-check skill (`rubric.md`, `procedure.md`, scope and voice guide), run in Claude Code on `plan.md` and `plan-comment.md` for issue #5295, after I checked the plan against the issue and the sibling PR #5682.
+- What it produced: `accept`, with all five required checks (diagnosis, scope, changes, test, comms) passing, and a voice-guide note that the guide's AI-use rule would conflict with `AGENTS.md`.
+- Difficulties: the rubric assumes a bug, so it read "cause" as "gap" for a missing fixture, and it found no posted repro comment, so it graded diagnosis from the repro facts quoted in the plan. The voice-guide conflict it flagged did reach the ship-gate later.
+- What changed: I cut anything beyond the issue's three deliverables from the plan before the check. After the build I recorded three small deviations in `plan.md` and the story, and later resolved the conflict by patching `ai-disclosure` and the voice guide.
 
 ---
 
 ## Testing Strategy
 
-[What observable checks prove the fix: your reproduction steps re-run
-against the built change (before and after), and the repo's own test
-suite or checks with the outcome shown. "Tests pass" with nothing
-observable named is not a strategy.]
+The fix adds test data, so the proof is the issue's own acceptance checks, run on `master` before and on my branch after. The full output is in `test_evidence.md`.
+
+1. **Reproduction steps, before and after.** On `master` (`e8325586e`), `ls` reports the fixture and test files missing, `.venv/bin/python -m pytest tests/unit/risk/test_successive_release_fixture.py -q` stops with "ERROR: file or directory not found", and the README has no match for "successive" or "intersect". On the branch (`8be36858a`) the files exist, the same pytest command gives `3 passed in 0.13s`, and the README has the new paragraph. The 35 existing tests in `test_regression_suites.py` and `test_kanon.py` pass both before and after.
+2. **Committed values, measured.** `kanon_report` on each release alone gives k 3 (release 1, eight classes of 3) and k 2 (release 2, class sizes 3, 3, 3, 3, 3, 3, 2, 4), matching `meta.expected`. A throwaway join on `privacy_unit_id`, not committed, gives intersection k 1 with `pu-03`, `pu-04` and `pu-21` isolated, matching the README.
+3. **The test fails when the data is wrong.** I moved one release-1 row into a one-row area and the k check failed with `assert 1 == 3`. With the fixture removed, all 3 test cases failed. I restored the file after both runs.
+4. **The repo's checks, in the environment CONTRIBUTING asks for.** I installed `uv` and ran `uv sync --frozen --extra dev` into a separate `.venv-uv`, so the versions come from `uv.lock`. There, `make format` leaves all 3623 files unchanged, `make lint` passes (ruff and `check_effect_paths.py`), `make format-check` passes, and `make type-check` gives "Success: no issues found in 4 source files". `pytest tests/unit/risk -q` gives 543 passed and 308 subtests passed, and `check_repo_policy.py --commits origin/master HEAD` passes for 3 commits.
+5. **The full suite, and what fails without my change.** `pytest tests/ -q` gives `6 failed, 35040 passed, 405 skipped` in 13m36s. The 6 failures are 2 tests outside `tests/unit/risk`: `test_malformed_iscii_preserves_clinical_text_and_identifier_spans` in `tests/fuzz/test_deidentify_fuzz.py` and the `[video]` case of `test_local_media_is_scrubbed_and_sent_only_to_loopback` in `tests/unit/structured/test_decision_server.py`. On `master` in the same environment the same 6 failed, so they predate my commits, and I left them alone because they are outside the issue.
 
 **Toolkit**
 
-- Tool:
-- What it produced:
-- Difficulties:
-- What changed:
+- Tool: Claude Code, running the commands from my reproduction steps and the repo's own checks through the shell on `master` and then on my branch: `pytest`, `ruff`, `mypy` through the `make` targets with `uv`, and the repo's `check_repo_policy.py`, plus small throwaway scripts (not committed) for the `kanon_report` values and the intersection join.
+- What it produced: `test_evidence.md`, with the before and after output of my reproduction steps, the measured k values, a failing run on altered data, the manifest checks, and the full suite and `make` targets in the locked environment.
+- Difficulties: the reproduction "before" state is a gap, so the evidence is a missing file, and a repo-wide grep on `master` matched my own untracked local files. My first checks ran in a pip-installed `.venv` with newer packages than `uv.lock`, so they showed 17 full-suite failures and a mypy crash that were not real problems with the repo; the locked environment shows 6 failures, which also fail on `master`. While checking mypy I switched branches during a running test, which spoiled that run, so I stopped it and reran it alone.
+- What changed: I installed `uv` and reran everything with `uv sync --frozen --extra dev`, as CONTRIBUTING asks, and used that output in `test_evidence.md` and the PR description. I would have used the locked environment from the start. I also kept the intersection check out of the committed test, because composition scoring is out of scope.
 
 ---
 
 ## Implementation Notes
 
-[A running log, added to as you work. Date each entry. What you
-built, decisions you made when you made them, wrong turns included.]
+<!-- 
+A running log, added to as you work. Date each entry. What you
+built, decisions you made when you made them, wrong turns included. 
+-->
 
-**[Date]**
+**2026-11-17**
 
-[Entry]
+Branched from `master` at `e8325586e` (same as `upstream/master`) as `test/issue-5295-successive-release-fixture`, which follows CONTRIBUTING's `<type>/issue-<number>-<slug>` rule. I designed the population on paper before writing any file: 24 privacy units, release 1 with ten-year age bands and a town, release 2 with five-year age bands and a district. I arranged the units so release 1 has k 3 (eight classes of 3), release 2 has k 2 (classes of 3, 3, 3, 3, 3, 3, 2 and 4), and joining the two isolates `pu-03`, `pu-04` and `pu-21`. A small script wrote the JSONL from that table. `kanon_report` and a throwaway join script, neither committed, gave the same k values and the same three isolated units as my paper design.
 
-**[Date]**
+**2026-11-17**
 
-[Entry]
+Committed in three steps: the fixture, the test, then the README paragraph. The test has two functions, one checking that every row is synthetic and each release has 20-40 rows, and one parametrized over both releases that checks each release alone gives the committed k from `meta.expected`, passing explicit `quasi_identifiers` so `privacy_unit_id` stays out. To check that it fails without the fix, I removed the fixture, and all 3 test cases failed with a missing-file error; I then changed one release-1 row into a singleton class and got `assert 1 == 3`. Restored, the file passes. Checks on the branch: `ruff check` and `ruff format --check` pass, `pytest tests/unit/risk -q` gives 543 passed, and `check_repo_policy.py` passes for the 3 commits. The diff is 3 files and 127 added lines, and nothing under `openmed/risk/` changed. One small difference from the plan: the test file is 54 lines, not the "about 40" I wrote, because I kept the loader and the parametrized k check readable. It stays inside the plan's scope, so I did not change `plan.md`.
+
+**2026-11-17**
+
+Ran the ship-gate on the branch, and it stopped three times before it passed. First, `repo-checks` failed because CONTRIBUTING asks for `pytest tests/ -q` and `make type-check` and I had shown only the risk tests. Second, `ai-disclosure` failed because the course asks for an AI-use statement, while the repo's `AGENTS.md` forbids tool names, co-author trailers and generation footers in PR text. I decided the repo rule outranks the course ask, so I changed only that check in my pr-precheck `rubric.md` and `procedure.md`, as the course allows: it now also passes when `AGENTS.md` forbids attribution and the description quotes that rule in one line with no attribution. Third, `template-complete` failed because I had ticked two boxes my own notes contradicted ("tests pass" beside the failing suite, and "ran make" beside "I did not run make"), so I unticked both and explained them.
+
+**2026-11-17**
+
+Installed `uv` with Homebrew and built the locked environment in `.venv-uv`, so my working `.venv` stayed untouched. `make format`, `make lint`, `make format-check` and `make type-check` all pass and `make format` changed no files. The full suite gives 6 failures in 2 unrelated tests, the same 6 on `master`, and I did not fix them. The ship-gate then passed on all 8 checks. I did not change the fixture, the test, the README, or my scope in this step.
 
 **Toolkit**
 
-- Tool:
-- What it produced:
-- Difficulties:
-- What changed:
+- Tool: Claude Code, with `git`, `uv` and the repo's `make` targets, `pytest`, `ruff` and `mypy`, my ship-gate and pr-precheck, and small throwaway scripts (not committed). I used it to design the population from a table, generate the JSONL from it, write the test and the README paragraph, make the commits, run the checks and draft the PR description, then I read the diff.
+- What it produced: the fixture (49 lines), the test (54 lines), the README paragraph (24 lines), three commits with `test:` and `docs:` messages, `test_evidence.md`, `pr_draft.md`, a patched `ai-disclosure` check, a passing ship-gate run, and four dated entries in this log.
+- Difficulties: the first edit to this story failed because the file had not been read in that session, and a later command changed the file under me, so I re-read it before editing. The design needed one correction before it worked: my first layout gave release 2 no class of size 2, so I regrouped two release-1 classes into one district. The repo's rule against tool names and co-author trailers meant I left the default commit attribution off, which the policy script confirmed, and it conflicted with the course's AI-disclosure check.
+- What changed: I wrote the k values and the isolated unit IDs into `meta.expected` and the README, so the test and the docs share one set of numbers. I recorded three small deviations from my plan under the Implementation Plan (test length, two extra `meta` fields, README length), and I changed neither `plan.md` nor the scope. I patched `ai-disclosure` in my rubric and procedure, and switched to the locked `uv` environment.
 
 ---
 
 ## Pull Request
 
-**PR Link:** [GitHub PR URL when opened]
+**PR Link:** https://github.com/maziyarpanahi/openmed/pull/5698
 
-**PR Description:** [what the PR says; much of the content above
-adapts into it]
+**PR Description:** Title: `test: add successive-release fixture and per-release kanon_report k test`, from `mobeloper:test/issue-5295-successive-release-fixture` into `master`, with `Fixes #5295`. The PR adds a synthetic fixture with two releases of one population of 24 privacy units, generalized differently (ten-year age bands and a town, then five-year age bands and a district), and a test that runs `kanon_report` on each release alone. Release 1 has k 3 and release 2 has k 2, so neither isolates a unit alone, but joining them on `privacy_unit_id` isolates `pu-03`, `pu-04` and `pu-21` (k 1). The fixture's `meta.expected` and a paragraph in `tests/fixtures/risk/README.md` record those values for later composition tests. The diff is 3 files and 127 added lines in three commits, and nothing under `openmed/risk/` changes. The description pastes the before and after output (the files and test missing on `master`, then `3 passed`, and 543 passed in `tests/unit/risk`), the `make format`, `lint`, `format-check` and `type-check` results, and a failing run on altered data (`assert 1 == 3`). Notes for Reviewers disclose that the full suite shows 6 failures in 2 unrelated tests that fail the same way on `master`, that composition scoring is left out on purpose, and the three small differences from my plan. The description has no AI-use statement; it quotes the `AGENTS.md` rule that forbids assistant and tool attribution in PR text.
 
 **Maintainer Feedback:**
 
-- [Date]: [feedback received, or "none yet"; silence is a normal
-  state and costs you nothing]
-- [Date]: [how you addressed it]
+- 2026-11-17: none yet.
 
-**Status:** [Awaiting review / Iterating / Merged / Closed. The
-status is a fact you record, never a grade: the PR is graded as
-opened.]
+**Status:** Awaiting review
 
 **Toolkit**
 
-- Tool:
-- What it produced:
-- Difficulties:
-- What changed:
+- Tool: the ship-gate (`check_gate.py`) with my gate manifest, which runs `ruff check`, `ruff format --check` and `pytest tests/unit/risk -q` and then my pr-precheck on the branch, `plan.md`, `test_evidence.md` and `pr_draft.md`; my voice guard hook, which checked the description when `gh pr create` ran; and Claude Code, which pushed the branch and ran `gh pr create` with `--body-file pr_draft.md`. I read the PR on GitHub afterwards to check the base repo, the branches, the title and the body.
+- What it produced: `ship-gate: PASS` with all three manifest checks and all 8 pr-precheck checks passing, on commit `8be36858a`, and PR #5698 on `maziyarpanahi/openmed`, which targets `master` and has `Fixes #5295` and no attribution footer.
+- Difficulties: the gate stopped three times before passing (full suite and type-check not shown, `ai-disclosure`, and two ticked boxes my notes contradicted), and the first PR attempt was stopped by the voice guard, whose rule asks for an AI-use statement that `AGENTS.md` forbids in PR text. A second attempt run from the wrong folder was stopped by the gate as "on main", and the first nested run needed an approval for `gh pr create`, so I ran it again with only that command allowed.
+- What changed: I patched `ai-disclosure` in my pr-precheck rubric and procedure to accept a quoted repo rule in place of a statement, and removed the AI-use rule from `voice-guide.md`, then copied it into the three `tools/` folders so the copies match. Both changes follow `AGENTS.md`, so the course's AI disclosure lives in this story and not in the PR. I would read the repo's agent rules before writing the voice guide.
 
 ---
 
