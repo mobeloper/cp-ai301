@@ -67,10 +67,9 @@ I folded my three voice guides into one, added four upstream rules (claims, ques
 
 My gate manifest runs `ruff check`, `ruff format --check` and `pytest tests/unit/risk -q`, and the ship-gate then runs my pr-precheck on the branch, `plan.md`, `test_evidence.md` and `pr_draft.md`. It stopped three times before it passed on commit `8be36858a`: the full suite and type-check were not shown, `ai-disclosure` failed because the course asks for an AI statement that openmed's `AGENTS.md` forbids in PR text, and two ticked boxes contradicted my notes. I changed only the `ai-disclosure` check in my rubric and procedure, installed `uv` to run the repo's `make` targets in the locked environment, and later removed the matching AI rule from my voice guide, which blocked `gh pr create`. The gate then passed on all 8 checks and the PR opened as https://github.com/maziyarpanahi/openmed/pull/5698.
 
-**Unit 8: [one line on the tool work]**
+**Unit 8: Wrote my playbook from openmed's merge history and ran the PR monitor on #5698, which drafted a wait**
 
-[2-4 sentences: the PR-monitor and your playbook. What it read, what it
-drafted, what you did with the draft.]
+I wrote a four-section playbook from the nine outside-contributor PRs merged on openmed (#5470-#5474, #5499, #5560, #5585, #5669, #5670), which all got a first maintainer response within about a day, and set the nudge at 4 quiet days. The monitor read #5698 (0 comments, 3 checks passing, 2 skipped or cancelled) and drafted "No nudge yet. Wait", citing my 4-day rule and a re-check on 2026-11-22, so I posted nothing. What fell short is that it counted from the last activity at 05:35Z without saying whether that was mine, and its UTC times put the PR a day ahead of my local date, so I will count the quiet days myself. I changed nothing in the playbook after the run, since a quiet PR is what the rule was written for, but I will look at the two skipped checks before then in case one needs a fix.
 
 ---
 
@@ -233,11 +232,6 @@ The fix adds test data, so the proof is the issue's own acceptance checks, run o
 
 ## Implementation Notes
 
-<!-- 
-A running log, added to as you work. Date each entry. What you
-built, decisions you made when you made them, wrong turns included. 
--->
-
 **2026-11-17**
 
 Branched from `master` at `e8325586e` (same as `upstream/master`) as `test/issue-5295-successive-release-fixture`, which follows CONTRIBUTING's `<type>/issue-<number>-<slug>` rule. I designed the population on paper before writing any file: 24 privacy units, release 1 with ten-year age bands and a town, release 2 with five-year age bands and a district. I arranged the units so release 1 has k 3 (eight classes of 3), release 2 has k 2 (classes of 3, 3, 3, 3, 3, 3, 2 and 4), and joining the two isolates `pu-03`, `pu-04` and `pu-21`. A small script wrote the JSONL from that table. `kanon_report` and a throwaway join script, neither committed, gave the same k values and the same three isolated units as my paper design.
@@ -253,6 +247,10 @@ Ran the ship-gate on the branch, and it stopped three times before it passed. Fi
 **2026-11-17**
 
 Installed `uv` with Homebrew and built the locked environment in `.venv-uv`, so my working `.venv` stayed untouched. `make format`, `make lint`, `make format-check` and `make type-check` all pass and `make format` changed no files. The full suite gives 6 failures in 2 unrelated tests, the same 6 on `master`, and I did not fix them. The ship-gate then passed on all 8 checks. I did not change the fixture, the test, the README, or my scope in this step.
+
+**2026-11-17**
+
+Wrote my PR-monitor playbook after counting how long openmed's merged outside-contributor PRs waited (#5470-#5474, #5499, #5560, #5585, #5669, #5670, all about a day or less), and set the nudge at 4 quiet days, one nudge, no second. I ran the monitor's `--state` check, which reported all four sections filled in, then a full run on #5698. It drafted "No nudge yet. Wait" and a re-check on or after 2026-11-22, so I posted nothing. PR #5698 has no comments or reviews yet, and the Maintainer Feedback line says so. I did not change the fixture, the test or the README.
 
 **Toolkit**
 
@@ -288,25 +286,22 @@ Installed `uv` with Homebrew and built the locked environment in `.venv-uv`, so 
 
 **Technical Skills Gained**
 
-[What you learned technically, named concretely.]
+I learned what k-anonymity means for released data and how releases compose: each release can look safe alone (k 3 and k 2) while joining them on a shared `privacy_unit_id` isolates `pu-03`, `pu-04` and `pu-21` (k 1). I learned to build synthetic JSONL test data from a designed table, with `meta.expected` as the single source of numbers for the test and the README, and to write a parametrized `pytest` test that fails when the fixture is missing or altered. I also learned the repo's toolchain (`uv` with a locked environment, `make format`, `lint`, `format-check`, `type-check`) and how to read a PR's checks, where 2 skipped or cancelled checks are not failures.
 
 **Challenges Overcome**
 
-[What was hard and how you solved it; point at the real events, the
-Toolkit blocks above are full of them.]
+My first pick, #5296, was taken by PR #5682 while my claim waited, because the scout cannot see outside PRs on sibling issues. I took the maintainer's offer of #5295 and graded it directly before claiming. The design needed a second try, since release 2 had no class of size 2, so I regrouped two release-1 classes into one district. The hardest conflict was policy: the course asks for an AI-use statement, while openmed's `AGENTS.md` forbids tool names, co-author trailers and generation footers in PR text. I let the repo rule win, patched only the `ai-disclosure` check, and removed the matching rule from my voice guide, which was blocking `gh pr create`. The ship-gate stopped three times before it passed on all 8 checks.
 
 **What I'd Do Differently Next Time**
 
-[Reflection on your process.]
+I would read the repo's `CONTRIBUTING.md` and `AGENTS.md` before writing my voice guide and gate, so the AI rule would not have blocked me twice. I would search for sibling PRs by number before claiming, and I would post my claim through the voice guard instead of before installing it. I would also count the maintainer's reply rhythm from merged PRs before choosing an issue, not only before writing the playbook. Now that #5698 is open with no review, I will wait until 2026-11-22 as my playbook says, send at most one nudge, and answer any review with the commit that fixed it.
 
 ---
 
 ## Resources Used
 
-[What actually helped, not a reading list. List things this story
-already shows you using: the doc you followed to set the environment
-up, the thread that explained the bug, the person who answered you.
-One real entry beats ten plausible ones.]
-
-- [Link to documentation that helped]
-- [Discussion, issue, or post that helped]
+- [openmed CONTRIBUTING.md](https://github.com/maziyarpanahi/openmed/blob/master/CONTRIBUTING.md): branch naming, the `pytest tests/ -q` and `make type-check` requirements that my ship-gate then enforced.
+- openmed `AGENTS.md`: the rule against tool names, co-author trailers and generation footers, which changed my `ai-disclosure` check, my voice guide and my commit attribution.
+- [Issue #5295](https://github.com/maziyarpanahi/openmed/issues/5295): it names every file, the acceptance criteria and the exact `pytest` command, so it served as my spec.
+- The maintainer's reply on my #5296 claim, which pointed me to #5295 after PR #5682 took that scope.
+- The merged PRs #5470-#5474, #5499, #5560, #5585, #5669 and #5670, which I counted to set the playbook's 4-day threshold.
